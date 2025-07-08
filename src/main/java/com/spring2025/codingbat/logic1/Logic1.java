@@ -268,5 +268,4 @@ public class Logic1 {
         }
         return a;
     }
-
 }
