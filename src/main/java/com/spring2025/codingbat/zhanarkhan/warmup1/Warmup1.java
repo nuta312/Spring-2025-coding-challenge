@@ -20,4 +20,12 @@ public class Warmup1 {
             return true;
         }
     }
+
+    public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+        if ((aSmile == true && bSmile == false) || (aSmile == false && bSmile == true)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
