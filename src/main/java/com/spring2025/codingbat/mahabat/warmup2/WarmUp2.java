@@ -52,4 +52,16 @@ public class WarmUp2 {
         if (x+1  >= str.length()) return false;
         return str.substring(x+1,x+2).equals("x");
     }
+
+    // Given a string, return a new string made of every other char starting with the first,
+    // so "Hello" yields "Hlo".
+
+    public String stringBits(String str) {
+
+        String newStr = "";
+        for (int i = 0; i < str.length(); i+=2) {
+            newStr = newStr + str.charAt(i);
+        }
+        return newStr;
+    }
 }
