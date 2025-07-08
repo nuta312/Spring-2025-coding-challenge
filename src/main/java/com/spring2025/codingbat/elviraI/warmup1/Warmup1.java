@@ -49,6 +49,14 @@ public class Warmup1 {
             return false;
         }
     }
+    public boolean nearHundred(int n) {
+        if (abs(100 - n) <= 10 || (abs(200 - n) <= 10)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
 
