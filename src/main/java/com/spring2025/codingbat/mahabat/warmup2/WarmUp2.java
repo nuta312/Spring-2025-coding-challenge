@@ -41,4 +41,15 @@ public class WarmUp2 {
         }
         return count;
     }
+
+    // Given a string, return true if the first instance
+    // of "x" in the string is immediately followed by another "x".
+
+    boolean doubleX(String str) {
+
+        int x = str.indexOf("x");
+        if (x == -1) return false;
+        if (x+1  >= str.length()) return false;
+        return str.substring(x+1,x+2).equals("x");
+    }
 }
