@@ -91,4 +91,8 @@ public class Warmup1 {
     public String front3(String str) {
         return (str.length() >= 3) ? str.substring(0,3) + str.substring(0,3) + str.substring(0,3) : str + str + str;
     }
+
+    public String backAround(String str) {
+        return (str.length() >= 2)? str.substring(str.length() - 1) + str + str.substring(str.length() - 1) : str + str + str;
+    }
 }
