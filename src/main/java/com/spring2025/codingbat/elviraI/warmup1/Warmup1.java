@@ -60,6 +60,11 @@ public class Warmup1 {
         return (a > 0 && b < 0 && !negative) || (b > 0 && a < 0 && !negative) || (a < 0 && b < 0 && negative) ? true : false;//тут можно тру фолс опустиьт
 
     }
+    public String notString(String str) {
+        return (str.startsWith("not") ? str : "not ".concat(str));
+
+    }
+
 
 
 
