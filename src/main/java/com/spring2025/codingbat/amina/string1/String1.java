@@ -295,5 +295,22 @@ public class String1 {
         return str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2));
     }
 
+    /**
+     Задача 21 - without2
+
+     If a length 2 substring appears at both the beginning and end,
+     return string without the first 2 chars. Otherwise return original string.
+
+     without2("HelloHe") → "lloHe"
+     without2("HelloHi") → "HelloHi"
+     without2("Hi") → ""
+     */
+    public String without2(String str) {
+        if (str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2))) {
+            return str.substring(2);
+        }
+        return str;
+    }
+
 
 }
