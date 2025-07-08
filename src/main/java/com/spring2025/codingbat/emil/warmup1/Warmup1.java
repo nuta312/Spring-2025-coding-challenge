@@ -130,6 +130,7 @@ diff21(21) → 0
             return "not " + str;
         }
     }
+
     /*
     Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
 
@@ -141,59 +142,75 @@ missingChar("kitten", 4) → "kittn"
     public String missingChar(String str, int n) {
         return str.substring(0, n) + str.substring(n + 1);
     }
-/*
-Given a string, return a new string where the first and last chars have been exchanged.
+
+    /*
+    Given a string, return a new string where the first and last chars have been exchanged.
 
 
-frontBack("code") → "eodc"
-frontBack("a") → "a"
-frontBack("ab") → "ba"
- */
-public String frontBack(String str) {
-    String result = "";
-    if (str.length() > 1){
-        String a = str.substring(0,1);
-        String b = str.substring(str.length()-1, str.length());
-        String c = str.substring(1, str.length()-1);
-        result = b + c + a;
-    }else {
-        result = str;
+    frontBack("code") → "eodc"
+    frontBack("a") → "a"
+    frontBack("ab") → "ba"
+     */
+    public String frontBack(String str) {
+        String result = "";
+        if (str.length() > 1) {
+            String a = str.substring(0, 1);
+            String b = str.substring(str.length() - 1, str.length());
+            String c = str.substring(1, str.length() - 1);
+            result = b + c + a;
+        } else {
+            result = str;
+        }
+        return result;
     }
-    return result;
-}
-/*
-    Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+    /*
+        Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
 
 
-front3("Java") → "JavJavJav"
-front3("Chocolate") → "ChoChoCho"
-front3("abc") → "abcabcabc"
- */
-public String front3(String str) {
-    return (str.length() >= 3) ? str.substring(0, 3).concat(str.substring(0, 3)).concat(str.substring(0, 3)) : str.concat(str).concat(str);
-}
-/*
-Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+    front3("Java") → "JavJavJav"
+    front3("Chocolate") → "ChoChoCho"
+    front3("abc") → "abcabcabc"
+     */
+    public String front3(String str) {
+        return (str.length() >= 3) ? str.substring(0, 3).concat(str.substring(0, 3)).concat(str.substring(0, 3)) : str.concat(str).concat(str);
+    }
+
+    /*
+    Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
 
 
-backAround("cat") → "tcatt"
-backAround("Hello") → "oHelloo"
-backAround("a") → "aaa"
- */
-public String backAround(String str) {
-    char last_char = str.charAt(str.length() - 1);
-    return last_char + str + last_char;
-}
-/*
-Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
+    backAround("cat") → "tcatt"
+    backAround("Hello") → "oHelloo"
+    backAround("a") → "aaa"
+     */
+    public String backAround(String str) {
+        char last_char = str.charAt(str.length() - 1);
+        return last_char + str + last_char;
+    }
+
+    /*
+    Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
 
 
-or35(3) → true
-or35(10) → true
-or35(8) → false
- */
-public boolean or35(int n) {
-    return (n % 3 ==0 || n % 5 == 0) ? true: false;
-}
+    or35(3) → true
+    or35(10) → true
+    or35(8) → false
+     */
+    public boolean or35(int n) {
+        return (n % 3 == 0 || n % 5 == 0) ? true : false;
+    }
+
+    /*
+    Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+
+
+    front22("kitten") → "kikittenki"
+    front22("Ha") → "HaHaHa"
+    front22("abc") → "ababcab"
+     */
+    public String front22(String str) {
+        return (str.length() >= 2) ? str.substring(0, 2) + str + str.substring(0, 2) : str + str + str;
+    }
 
 }
