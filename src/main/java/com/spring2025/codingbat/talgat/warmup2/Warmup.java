@@ -26,5 +26,18 @@ public class Warmup {
         return result;
     }
 
+    int countXX(String str) {
+        int result = 0;
+        int count = 0;
+        for (char ch: str.toCharArray()){
+            if (Character.toString(ch).equalsIgnoreCase("x")){
+                if ((str.length()-1) > count && str.substring(count, count + 2).equalsIgnoreCase("xx"))
+                    result+=1;
+            }
+            count++;
+        }
+        return result;
+    }
+
 
 }
