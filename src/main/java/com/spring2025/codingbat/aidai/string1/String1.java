@@ -249,4 +249,25 @@ public boolean hasBad(String str) {
     return (str.length() >= 3 && str.substring(0, 3).equals("bad")) ||
             (str.length() >= 4 && str.substring(1, 4).equals("bad"));
 }
+/**
+ Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars.
+
+
+ atFirst("hello") → "he"
+ atFirst("hi") → "hi"
+ atFirst("h") → "h@"
+ */
+public String atFirst(String str) {
+    if (str.length()==0){
+        return "@@";
+    }
+    if (str.length()==1){
+        return str.substring(0,1) + "@";
+
+    }
+    if (str.length()>=2){
+        return str.substring(0,2);
+    }
+    return str;
+}
 }
