@@ -95,4 +95,8 @@ public class Warmup1 {
     public String backAround(String str) {
         return (str.length() >= 2)? str.substring(str.length() - 1) + str + str.substring(str.length() - 1) : str + str + str;
     }
+
+    public boolean or35(int n) {
+        return (n % 3 == 0)? true : (n % 5 == 0)? true : false;
+    }
 }
