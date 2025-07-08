@@ -58,4 +58,19 @@ public class String1 {
         return a.substring(1) + b.substring(1);
     }
 
+    /**
+     Задача 5 - theEnd
+
+     Given a string, return a string length 1 from its front,
+     unless front is false, in which case return a string length 1 from its back.
+     The string will be non-empty.
+
+     theEnd("Hello", true) → "H"
+     theEnd("Hello", false) → "o"
+     theEnd("oh", true) → "o"
+     */
+    public String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
+    }
+
 }
