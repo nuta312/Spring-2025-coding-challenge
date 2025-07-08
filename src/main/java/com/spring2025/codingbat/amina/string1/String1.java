@@ -249,5 +249,21 @@ public class String1 {
         return str.substring(0, n) + str.substring(str.length() - n);
     }
 
+    /**
+     Задача 18 - hasBad
+
+     Return true if "bad" appears starting at index 0 or 1 in the string.
+     The string may be any length.
+
+     hasBad("badxx") → true
+     hasBad("xbadxx") → true
+     hasBad("xxbadxx") → false
+     */
+    public boolean hasBad(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("bad")) return true;
+        if (str.length() >= 4 && str.substring(1, 4).equals("bad")) return true;
+        return false;
+    }
+
 
 }
