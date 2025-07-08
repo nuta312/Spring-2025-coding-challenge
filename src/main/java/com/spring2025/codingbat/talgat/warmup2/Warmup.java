@@ -154,5 +154,20 @@ public class Warmup {
         return t;
     }
 
+    public int array667(int[] nums) {
+        int result = 0;
+        int count = 0;
+
+        for (int i: nums){
+            if (i == 6 && nums.length-1 > count){
+                if (nums[count+1]==6||nums[count+1]==7) {
+                    result += 1;
+                }
+            }
+            count++;
+        }
+        return result;
+    }
+
 
 }
