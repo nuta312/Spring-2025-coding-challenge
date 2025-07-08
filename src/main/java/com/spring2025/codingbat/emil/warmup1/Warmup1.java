@@ -270,18 +270,33 @@ startHi("hello hi") → false
         }
 
     }
-/*
-We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+
+    /*
+    We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
 
 
-loneTeen(13, 99) → true
-loneTeen(21, 19) → true
-loneTeen(13, 13) → false
- */
-public boolean loneTeen(int a, int b) {
-    boolean ateen = (a >= 13 && a <= 19);
-    boolean bteen = (b >= 13 && b <= 19);
-    return ((ateen && !bteen) || (!ateen && bteen));
-}
+    loneTeen(13, 99) → true
+    loneTeen(21, 19) → true
+    loneTeen(13, 13) → false
+     */
+    public boolean loneTeen(int a, int b) {
+        boolean ateen = (a >= 13 && a <= 19);
+        boolean bteen = (b >= 13 && b <= 19);
+        return ((ateen && !bteen) || (!ateen && bteen));
+    }
+
+    /*
+    Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+
+
+    delDel("adelbc") → "abc"
+    delDel("adelHello") → "aHello"
+    delDel("adedbc") → "adedbc"
+     */
+    public String delDel(String str) {
+        return (str.length() >= 4 && str.substring(1, 4).equals("del"))
+                ? str.charAt(0) + str.substring(4)
+                : str;
+    }
 
 }
