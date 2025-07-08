@@ -10,5 +10,12 @@ public class Warmup1 {
     public boolean sleepIn(boolean weekday, boolean vacation) {
         return !weekday || vacation;
     }
+    /// monkeyTrouble(true, true) → true
+    /// monkeyTrouble(false, false) → true
+    /// monkeyTrouble(true, false) → false
 
+    /// Warmup-1 > monkeyTrouble
+    public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+        return aSmile == bSmile;
+    }
 }
