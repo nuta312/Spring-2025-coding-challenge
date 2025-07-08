@@ -46,6 +46,7 @@ sumDouble(2, 2) → 8
             return (a + b) * 2;
         }
     }
+
     /*
     Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
 
@@ -61,6 +62,7 @@ diff21(21) → 0
             return (n - 21) * 2;
         }
     }
+
     /*
     We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
 
@@ -75,6 +77,7 @@ diff21(21) → 0
             return false;
         }
     }
+
     /*
     Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
 
@@ -83,7 +86,19 @@ diff21(21) → 0
     makes10(1, 9) → true
      */
     public boolean makes10(int a, int b) {
-        return (a == 10 || b ==10 || (a+b) == 10)? true:false;
+        return (a == 10 || b == 10 || (a + b) == 10) ? true : false;
+    }
+
+    /*
+    Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+
+    nearHundred(93) → true
+    nearHundred(90) → true
+    nearHundred(89) → false
+
+     */
+    public boolean nearHundred(int n) {
+        return Math.abs(n - 100) <= 10 || Math.abs(n - 200) <= 10;
     }
 
 }
