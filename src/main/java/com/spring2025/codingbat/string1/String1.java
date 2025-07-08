@@ -88,6 +88,13 @@ public class String1 {
         return str.substring(mid - 1, mid + 1);
     }
 
+    public boolean endsLy(String str) {
+        if (str.endsWith("ly")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 }
