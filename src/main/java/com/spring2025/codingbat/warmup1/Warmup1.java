@@ -71,7 +71,7 @@ public class Warmup1 {
         }
 
         /// Given an int n, return true if it is within 10 of 100 or 200. Note:
-        ///Math.abs(num) computes the absolute value of a number.
+        /// Math.abs(num) computes the absolute value of a number.
         /// nearHundred(93) → true
         /// nearHundred(90) → true
         /// nearHundred(89) → false
@@ -82,18 +82,18 @@ public class Warmup1 {
 
         /// Given 2 int values, return true if one is negative and one is positive.
         /// Except if the parameter "negative" is true, then return true only if both are negative.
-        ///posNeg(1, -1, false) → true
+        /// posNeg(1, -1, false) → true
         /// posNeg(-1, 1, false) → true
         /// posNeg(-4, -5, true) → true
         /// Warmup-1 > posNeg
         public boolean posNeg(int a, int b, boolean negative) {
             if (negative) {
                 return (a < 0 && b < 0);
-            }
-            else {
+            } else {
                 return ((a < 0 && b > 0) || (a > 0 && b < 0));
             }
         }
+
         /// Given a string, return a new string where "not " has been added to the front.
         /// However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings
         /// notString("candy") → "not candy"
@@ -106,6 +106,7 @@ public class Warmup1 {
             }
             return "not " + str;
         }
+
         /// Given a non-empty string and an int n, return a new string where the char at index n has been removed.
         /// The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
         /// missingChar("kitten", 1) → "ktten"
@@ -114,9 +115,10 @@ public class Warmup1 {
         /// Warmup-1 > missingChar
         public String missingChar(String str, int n) {
             String st1 = str.substring(0, n);
-            String st2 = str.substring(n+1, str.length());
+            String st2 = str.substring(n + 1, str.length());
             return st1 + st2;
         }
+
         /// Given a string, return a new string where the first and last chars have been exchanged.
         /// frontBack("code") → "eodc"
         /// frontBack("a") → "a"
@@ -124,9 +126,10 @@ public class Warmup1 {
         /// Warmup-1 > frontBack
         public String frontBack(String str) {
             if (str.length() <= 1) return str;
-            String mid = str.substring(1, str.length()-1);
-            return str.charAt(str.length()-1) + mid + str.charAt(0);
+            String mid = str.substring(1, str.length() - 1);
+            return str.charAt(str.length() - 1) + mid + str.charAt(0);
         }
+
         /// Given a string, we'll say that the front is the first 3 chars of the string.
         /// If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
         /// front3("Java") → "JavJavJav"
@@ -135,14 +138,14 @@ public class Warmup1 {
         /// Warmup-1 > front3
         public String front3(String str) {
             String str1;
-            if(str.length() >= 3){
+            if (str.length() >= 3) {
                 str1 = str.substring(0, 3);
-            }
-            else {
+            } else {
                 str1 = str;
             }
             return str1 + str1 + str1;
         }
+
         /// Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt".
         /// The original string will be length 1 or more.
         /// backAround("cat") → "tcatt"
@@ -150,8 +153,21 @@ public class Warmup1 {
         /// backAround("a") → "aaa"
         /// Warmup-1 > backAround
         public String backAround(String str) {
-            String last = str.substring(str.length()-1);
+            String last = str.substring(str.length() - 1);
             return last + str + last;
         }
+        /// Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
+        /// or35(3) → true
+        /// or35(10) → true
+        /// or35(8) → false
+        /// Warmup-1 > or35
+        public boolean or35(int n) {
+            if (n % 3 == 0 || n % 5 == 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
 
     }
