@@ -25,4 +25,15 @@ public class Warmup1 {
     public int diff21(int n) {
         return (n > 21) ? (n - 21) * 2: 21 - n;
     }
+
+    //w2 parrotTrouble
+    public boolean parrotTrouble(boolean talking, int hour) {
+
+        if (hour <= 23 && hour >= 0){
+            return talking && (hour < 7 || hour > 20);
+        }else {
+            return false;
+        }
+
+    }
 }
