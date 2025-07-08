@@ -78,6 +78,13 @@ public class Warmup1 {
                 str.substring(0, 3).concat(str.substring(0, 3)).concat(str.substring(0, 3)) :
                 str.concat(str).concat(str);
     }
+    public String backAround(String str) {
+        String r = str.substring(str.length() - 1);
+
+        return (str.length() > 2) ? r + str + r : str + str + str;
+
+    }
+
 
 
 
