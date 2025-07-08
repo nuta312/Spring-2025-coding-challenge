@@ -83,6 +83,19 @@ public class Warmup {
         return count;
     }
 
+    public boolean arrayFront9(int[] nums) {
+        int count = 0;
+        boolean result = false;
+        for (int i: nums){
+            if (count<4&&i==9){
+                result = true;
+            }
+            count++;
+        }
+        return result;
+    }
+
+
 
 
 }
