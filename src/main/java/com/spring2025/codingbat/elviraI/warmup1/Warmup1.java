@@ -64,6 +64,11 @@ public class Warmup1 {
         return (str.startsWith("not") ? str : "not ".concat(str));
 
     }
+    public String missingChar(String str, int n) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.deleteCharAt(n).toString();
+    }
+
 
 
 
