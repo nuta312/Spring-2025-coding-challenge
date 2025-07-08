@@ -344,4 +344,17 @@ public class String1 {
         return "<" + tag + ">" + word + "</" + tag + ">";
     }
 
+    /**
+     Задача 24 - firstTwo
+
+     Return the first two chars of the string. If string is shorter than 2, return what’s there.
+
+     firstTwo("Hello") → "He"
+     firstTwo("abcdefg") → "ab"
+     firstTwo("ab") → "ab"
+     */
+    public String firstTwo(String str) {
+        return str.length() < 2 ? str : str.substring(0, 2);
+    }
+
 }
