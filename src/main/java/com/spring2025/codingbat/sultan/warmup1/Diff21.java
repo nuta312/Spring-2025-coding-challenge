@@ -9,9 +9,9 @@ public class Diff21 {
      diff21(21) → 0
      */
     public static void main(String[] args) {
-        diff21(19);
-        diff21(10);
-        diff21(21);
+        System.out.println(diff21(19));
+        System.out.println(diff21(10));
+        System.out.println(diff21(21));
     }
 
     public static int diff21(int n) {
