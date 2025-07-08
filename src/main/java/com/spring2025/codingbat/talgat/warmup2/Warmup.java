@@ -39,5 +39,17 @@ public class Warmup {
         return result;
     }
 
+    public String stringBits(String str) {
+        String result = "";
+        int count = 0;
+        for (char ch: str.toCharArray()){
+            if (count%2==0){
+                result+=ch;
+            }
+            count++;
+        }
+        return result;
+    }
+
 
 }
