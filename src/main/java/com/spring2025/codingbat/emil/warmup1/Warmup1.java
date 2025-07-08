@@ -141,5 +141,25 @@ missingChar("kitten", 4) → "kittn"
     public String missingChar(String str, int n) {
         return str.substring(0, n) + str.substring(n + 1);
     }
+/*
+Given a string, return a new string where the first and last chars have been exchanged.
+
+
+frontBack("code") → "eodc"
+frontBack("a") → "a"
+frontBack("ab") → "ba"
+ */
+public String frontBack(String str) {
+    String result = "";
+    if (str.length() > 1){
+        String a = str.substring(0,1);
+        String b = str.substring(str.length()-1, str.length());
+        String c = str.substring(1, str.length()-1);
+        result = b + c + a;
+    }else {
+        result = str;
+    }
+    return result;
+}
 
 }
