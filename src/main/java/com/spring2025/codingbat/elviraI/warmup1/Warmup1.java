@@ -68,6 +68,12 @@ public class Warmup1 {
         StringBuilder sb = new StringBuilder(str);
         return sb.deleteCharAt(n).toString();
     }
+    public String frontBack(String str) {
+        if (str.length() < 2) return str;
+        return str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
+
+    }
+
 
 
 
