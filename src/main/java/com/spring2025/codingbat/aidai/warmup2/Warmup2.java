@@ -90,4 +90,20 @@ public String stringBits(String str) {
     }
     return res;
 }
+/**
+ Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+ stringSplosion("Code") → "CCoCodCode"
+ stringSplosion("abc") → "aababc"
+ stringSplosion("ab") → "aab"
+ */
+public String stringSplosion(String str){
+    String res = "";
+    for (int i = 1; i <= str.length(); i++) {
+        String part = str.substring(0, i);
+        res += part;
+    }
+    return res;
+}
 }
