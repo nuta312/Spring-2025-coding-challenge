@@ -64,4 +64,10 @@ public class Warmup1 {
             return n.concat(str);
         }
     }
+
+    public String missingChar(String str, int n) {
+        StringBuilder t = new StringBuilder(str);
+        String result = t.deleteCharAt(n).toString();
+        return result;
+    }
 }
