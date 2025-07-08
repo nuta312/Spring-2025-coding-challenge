@@ -478,4 +478,25 @@ public class String1 {
         return result;
     }
 
+    /**
+     Задача 33 - withoutX2
+
+     Given a string, if one or both of the first 2 chars is 'x',
+     return the string without those 'x' chars.
+
+     withoutX2("xHi") → "Hi"
+     withoutX2("Hxi") → "Hi"
+     withoutX2("Hi") → "Hi"
+     */
+    public String withoutX2(String str) {
+        String result = str;
+        if (str.length() >= 1 && str.charAt(0) == 'x') {
+            result = result.substring(1);
+        }
+        if (result.length() >= 1 && result.charAt(0) == 'x') {
+            result = result.substring(1);
+        }
+        return result;
+    }
+
 }
