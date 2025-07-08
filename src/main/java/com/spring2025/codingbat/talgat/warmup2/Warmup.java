@@ -95,6 +95,21 @@ public class Warmup {
         return result;
     }
 
+    public boolean array123(int[] nums) {
+        int count = 0;
+        boolean result = false;
+        for (int i: nums){
+            if (i == 1 && count<nums.length-2){
+                if (nums[count+1]==2 && nums[count+2]==3){
+                    result = true;
+                    break;
+                }
+            }
+            count++;
+        }
+        return result;
+    }
+
 
 
 
