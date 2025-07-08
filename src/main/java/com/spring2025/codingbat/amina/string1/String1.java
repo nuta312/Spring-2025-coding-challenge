@@ -357,4 +357,17 @@ public class String1 {
         return str.length() < 2 ? str : str.substring(0, 2);
     }
 
+    /**
+     Задача 25 - comboString
+
+     Return short+long+short, with the shorter string outside.
+
+     comboString("Hello", "hi") → "hiHellohi"
+     comboString("hi", "Hello") → "hiHellohi"
+     comboString("aaa", "b") → "baaab"
+     */
+    public String comboString(String a, String b) {
+        return a.length() < b.length() ? a + b + a : b + a + b;
+    }
+
 }
