@@ -370,4 +370,17 @@ public class String1 {
         return a.length() < b.length() ? a + b + a : b + a + b;
     }
 
+    /**
+     Задача 26 - right2
+
+     Return "rotated right 2" version — last 2 chars moved to front.
+
+     right2("Hello") → "loHel"
+     right2("java") → "vaja"
+     right2("Hi") → "Hi"
+     */
+    public String right2(String str) {
+        return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
+    }
+
 }
