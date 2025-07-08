@@ -32,6 +32,7 @@ public class Warmup1 {
         }
         return false;
     }
+
     /*
     Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 
@@ -40,10 +41,25 @@ sumDouble(3, 2) → 5
 sumDouble(2, 2) → 8
      */
     public int sumDouble(int a, int b) {
-        if (a > b || b > a){
+        if (a > b || b > a) {
             return a + b;
-        } else{
-            return (a+b)*2;
+        } else {
+            return (a + b) * 2;
+        }
+    }
+    /*
+    Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+
+diff21(19) → 2
+diff21(10) → 11
+diff21(21) → 0
+     */
+    public int diff21(int n) {
+        if (n <= 21) {
+            return 21 - n;
+        } else {
+            return (n - 21) * 2;
         }
     }
 }
