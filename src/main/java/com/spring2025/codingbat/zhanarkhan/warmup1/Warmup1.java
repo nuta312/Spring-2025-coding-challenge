@@ -150,4 +150,8 @@ public class Warmup1 {
     public String startOz(String str) {
         return (str.length() == 0)? str : (str.length() == 1)? str : (str.substring(0,2).equals("oz")) ? "oz" : (str.substring(1,2).equals("z")) ? "z" : (str.substring(0,1).equals("o")) ? "o" : "";
     }
+
+    public int intMax(int a, int b, int c) {
+        return (a > b && a > c)? a : (b > a && b > c)? b : (c > a && c > b)? c : 0;
+    }
 }
