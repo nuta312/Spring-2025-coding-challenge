@@ -93,6 +93,11 @@ public class Warmup1 {
         return (str.length() >= 1) ? str.charAt(str.length()-1)+str+str.charAt(str.length()-1):str;
     }
 
+    public boolean or35(int n) {
+        return n%3==0||n%5==0;
+    }
+
+
 
 
 }
