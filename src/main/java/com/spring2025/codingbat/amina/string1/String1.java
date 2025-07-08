@@ -282,5 +282,18 @@ public class String1 {
         return a + b;
     }
 
+    /**
+     Задача 20 - frontAgain
+
+     Return true if the first 2 chars in the string also appear at the end of the string.
+
+     frontAgain("edited") → true
+     frontAgain("edit") → false
+     frontAgain("ed") → true
+     */
+    public boolean frontAgain(String str) {
+        return str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2));
+    }
+
 
 }
