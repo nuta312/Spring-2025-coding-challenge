@@ -70,4 +70,19 @@ public class Warmup1 {
         String result = t.deleteCharAt(n).toString();
         return result;
     }
+
+    public String frontBack(String str) {
+
+        if (str == null || str.length() <= 1) {
+            return str;
+        }
+
+        char fch = str.charAt(0);
+        char lch = str.charAt(str.length() - 1);
+        String mid = str.substring(1, str.length() - 1);
+
+        return lch + mid + fch;
+
+    }
+
 }
