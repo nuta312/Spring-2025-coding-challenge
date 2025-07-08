@@ -107,4 +107,8 @@ public class Warmup1 {
     public boolean startHi(String str) {
         return (str.length() >=2 && str.substring(0,2).equals("hi"))? true : false;
     }
+
+    public boolean icyHot(int temp1, int temp2) {
+        return ((temp1 > 100 && temp2 < 0) || (temp1 < 0 && temp2 > 100)) ? true : false;
+    }
 }
