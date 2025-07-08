@@ -23,6 +23,11 @@ public class Warmup1 {
         }
         return false;
     }
+    public static int sumDouble(int a, int b) {
+        if (a != b) {
+            return a + b;
+        } else return (a + b) * 2;
+    }
 
 
 }
