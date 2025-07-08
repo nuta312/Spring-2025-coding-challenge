@@ -104,4 +104,13 @@ public class Warmup1 {
         StringBuilder sb = new StringBuilder(str);
         return sb.deleteCharAt(n).toString();
     }
+
+    // Given a string, return a new string where the first and last chars have been exchanged.
+
+    public String frontBack(String str) {
+
+        return (str.length() > 1)? str.substring(str.length() - 1) + str.substring(1, str.length() - 1 ) + str.substring(0,1) : str ;
+    }
+
+
 }
