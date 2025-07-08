@@ -20,4 +20,9 @@ public class Warmup1 {
     public int sumDouble(int a, int b) {
         return (a == b) ? (a + b)*2 : a + b;
     }
+
+    //w2 diff21
+    public int diff21(int n) {
+        return (n > 21) ? (n - 21) * 2: 21 - n;
+    }
 }
