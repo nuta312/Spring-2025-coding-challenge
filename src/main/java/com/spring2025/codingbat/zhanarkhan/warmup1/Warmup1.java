@@ -78,4 +78,10 @@ public class Warmup1 {
     public String notString(String str) {
         return (str.length() >= 3 && str.substring(0, 3).equals("not"))? str : "not " + str;
     }
+
+    public String missingChar(String str, int n) {
+        StringBuilder sb1 = new StringBuilder(str);
+        return (str.length() > n && n >= 0)? sb1.deleteCharAt(n).toString() : str;
+    }
+
 }
