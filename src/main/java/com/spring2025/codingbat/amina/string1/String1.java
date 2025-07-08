@@ -148,4 +148,25 @@ public class String1 {
         return front + front + front;
     }
 
+    /**
+     Задача 11 - startWord
+
+     Given a string and a second "word" string, we'll say that the word matches the string
+     if it appears at the front of the string, except its first char does not need to match exactly.
+     On a match, return the front of the string, or otherwise return the empty string.
+
+     startWord("hippo", "hi") → "hi"
+     startWord("hippo", "xip") → "hip"
+     startWord("hippo", "i") → "h"
+     */
+    public String startWord(String str, String word) {
+        if (str.length() < word.length()) return "";
+        String slice = str.substring(1, word.length());
+        String wordSlice = word.substring(1);
+        if (slice.equals(wordSlice)) {
+            return str.substring(0, word.length());
+        }
+        return "";
+    }
+
 }
