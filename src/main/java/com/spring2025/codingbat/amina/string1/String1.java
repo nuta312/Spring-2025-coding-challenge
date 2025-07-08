@@ -383,4 +383,18 @@ public class String1 {
         return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
     }
 
+    /**
+     Задача 27 - middleTwo
+
+     Return the middle 2 chars of a string of even length.
+
+     middleTwo("string") → "ri"
+     middleTwo("code") → "od"
+     middleTwo("Practice") → "ct"
+     */
+    public String middleTwo(String str) {
+        int mid = str.length() / 2;
+        return str.substring(mid - 1, mid + 1);
+    }
+
 }
