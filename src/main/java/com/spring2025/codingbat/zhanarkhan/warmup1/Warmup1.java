@@ -70,4 +70,8 @@ public class Warmup1 {
             return false;
         }
     }
+
+    public boolean posNeg(int a, int b, boolean negative) {
+        return (a > 0 && b < 0 && negative == false) ? true : (a < 0 && b > 0 && negative == false) ? true : (a < 0 && b < 0 && negative == true) ? true : false;
+    }
 }
