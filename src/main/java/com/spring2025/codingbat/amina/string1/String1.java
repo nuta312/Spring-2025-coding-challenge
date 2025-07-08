@@ -170,7 +170,7 @@ public class String1 {
     }
 
     /**
-     Задача 12 - startWord
+     Задача 12 - makeAbba
      Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
      makeAbba("Hi", "Bye") → "HiByeByeHi"
      makeAbba("Yo", "Alice") → "YoAliceAliceYo"
@@ -180,5 +180,17 @@ public class String1 {
         return a + b + b + a;
     }
 
+    /**
+     Задача 13 - extraEnd
+     Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+     makeAbba("Hi", "Bye") → "HiByeByeHi"
+     makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+     makeAbba("What", "Up") → "WhatUpUpWhat"
+     */
+    public String extraEnd(String str) {
+        String last2 = str.substring(str.length() - 2);
+        return last2 + last2 + last2;
+
+    }
 
 }
