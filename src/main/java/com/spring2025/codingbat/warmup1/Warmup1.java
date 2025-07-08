@@ -179,6 +179,20 @@ public class Warmup1 {
             String first = str.substring(0,2);
             return first + str + first;
         }
+        /// Given a string, return true if the string starts with "hi" and false otherwise.
+        /// startHi("hi there") → true
+        /// startHi("hi") → true
+        /// startHi("hello hi") → false
+        /// Warmup-1 > startHi
+        public boolean startHi(String str) {
+            if (str.length() < 2) return false;
+            if (str.substring(0,2).contains("hi")){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
 
 
 
