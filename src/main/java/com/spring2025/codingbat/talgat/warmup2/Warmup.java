@@ -169,5 +169,29 @@ public class Warmup {
         return result;
     }
 
+    public boolean noTriples(int[] nums) {
+        int count = 0;
+
+        boolean result = true;
+        if (nums.length==0){
+            result = true;
+        }else {
+            int t = nums[0];
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == t) {
+                    count += 1;
+                    if (count == 3) {
+                        result = false;
+                        break;
+                    }
+                } else {
+                    count = 1;
+                }
+                t = nums[i];
+            }
+        }
+        return result;
+    }
+
 
 }
