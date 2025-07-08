@@ -460,4 +460,22 @@ public class String1 {
         return a.substring(a.length() - minLen) + b.substring(b.length() - minLen);
     }
 
+    /**
+     Задача 32 - deFront
+
+     Given a string, return a version without the first 2 chars.
+     Except keep the first char if it is 'a' and keep the second char if it is 'b'.
+
+     deFront("Hello") → "llo"
+     deFront("java") → "va"
+     deFront("away") → "aay"
+     */
+    public String deFront(String str) {
+        String result = "";
+        if (str.length() >= 1 && str.charAt(0) == 'a') result += "a";
+        if (str.length() >= 2 && str.charAt(1) == 'b') result += "b";
+        if (str.length() > 2) result += str.substring(2);
+        return result;
+    }
+
 }
