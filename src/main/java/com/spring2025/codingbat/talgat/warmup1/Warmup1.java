@@ -51,4 +51,17 @@ public class Warmup1 {
     public boolean posNeg(int a, int b, boolean negative) {
         return negative ? (a < 0 && b < 0) : (a < 0 && b > 0) || (a > 0 && b < 0);
     }
+
+    public String notString(String str) {
+        String n = "not ";
+        if (str.length() >= 3){
+            if(str.substring(0,3).equals("not")){
+                return str;
+            }else {
+                return n.concat(str);
+            }
+        }else {
+            return n.concat(str);
+        }
+    }
 }
