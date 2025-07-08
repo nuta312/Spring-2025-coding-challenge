@@ -171,4 +171,14 @@ public class Warmup1 {
         return Math.max(a, b);
     }
 
+    public boolean stringE(String str) {
+        char[] chars = str.toCharArray();
+        int count = 0;
+        for (char c : chars) {
+            if (c == 'e') {
+                count ++;
+            }
+        }
+        return (count >= 1 && count <= 3);
+    }
 }
