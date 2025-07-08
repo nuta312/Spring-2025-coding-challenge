@@ -164,4 +164,11 @@ public class Warmup1 {
     public boolean in3050(int a, int b) {
         return (a >= 30 && a <= 40 && b >= 30 && b <=40 || a >= 40 && a <= 50 && b >= 40 && b <=50);
     }
+
+    public int max1020(int a, int b) {
+        if (!(a >= 10 && a <= 20)) a = 0;
+        if (!(b >= 10 && b <= 20)) b = 0;
+        return Math.max(a, b);
+    }
+
 }
