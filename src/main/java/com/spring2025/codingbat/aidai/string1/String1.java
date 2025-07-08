@@ -354,4 +354,25 @@ public boolean frontAgain(String str) {
         return false;
     }
 }
+/**
+ Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.
+
+
+ minCat("Hello", "Hi") → "loHi"
+ minCat("Hello", "java") → "ellojava"
+ minCat("java", "Hello") → "javaello"
+ */
+public String minCat(String a, String b) {
+    if (a.length() == b.length()) {
+        return a.concat(b);
+    }
+    if (a.length() > b.length()) {
+        String re1 = a.substring(a.length() - b.length());
+        return re1 + b;
+    } else {
+        String re2 = b.substring(b.length() - a.length());
+
+        return  a + re2;
+    }
+}
 }
