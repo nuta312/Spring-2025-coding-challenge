@@ -444,5 +444,20 @@ public class String1 {
                 str.charAt(str.length() - 2);
     }
 
+    /**
+     Задача 31 - minCat
+
+     Given two strings, append them together (known as "concatenation") and return the result.
+     However, if the strings are different lengths, omit chars from the longer string
+     so it is the same length as the shorter string.
+
+     minCat("Hello", "Hi") → "loHi"
+     minCat("Hello", "java") → "ellojava"
+     minCat("java", "Hello") → "javaello"
+     */
+    public String minCat(String a, String b) {
+        int minLen = Math.min(a.length(), b.length());
+        return a.substring(a.length() - minLen) + b.substring(b.length() - minLen);
+    }
 
 }
