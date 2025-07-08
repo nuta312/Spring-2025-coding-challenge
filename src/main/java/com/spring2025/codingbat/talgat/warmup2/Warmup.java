@@ -110,7 +110,16 @@ public class Warmup {
         return result;
     }
 
-
-
+    public int stringMatch(String a, String b) {
+        int count = 0;
+        int result =0;
+        while (a.length()-2>=count&&b.length()-2>=count){
+            if (a.substring(count,count+2).equalsIgnoreCase(b.substring(count,count+2))){
+                result+=1;
+            }
+            count++;
+        }
+        return result;
+    }
 
 }
