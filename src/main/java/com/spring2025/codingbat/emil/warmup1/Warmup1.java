@@ -239,5 +239,16 @@ icyHot(2, 120) → false
 public boolean icyHot(int temp1, int temp2) {
     return (temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100);
 }
+/*
+Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+
+
+in1020(12, 99) → true
+in1020(21, 12) → true
+in1020(8, 99) → false
+ */
+public boolean in1020(int a, int b) {
+    return (a >= 10 && a <=20) || (b >= 10 && b <=20);
+}
 
 }
