@@ -18,4 +18,17 @@ public class Warmup1 {
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
         return aSmile == bSmile;
     }
+    /// sumDouble(1, 2) → 3
+    /// sumDouble(3, 2) → 5
+    /// sumDouble(2, 2) → 8
+
+    /// Warmup-1 > sumDouble
+    public int sumDouble(int a, int b) {
+        if (a == b){
+            return 2 * (a + b);
+        }else {
+            return (a + b);
+        }
+    }
+
 }
