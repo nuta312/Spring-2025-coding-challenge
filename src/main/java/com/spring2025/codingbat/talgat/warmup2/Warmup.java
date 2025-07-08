@@ -59,5 +59,20 @@ public class Warmup {
         return result;
     }
 
+    public int last2(String str) {
+        int result = 0;
+        if (str.length()>3) {
+            String str1 = str.substring(str.length() - 2);
+            String str2 = str.substring(0, str.length() - 2);
+            for (int i = 0; i < str2.length(); i++) {
+                if (str.substring(i,i+2).equalsIgnoreCase(str1)){
+                    result+=1;
+                }
+            }
+        }
+        return result;
+    }
+
+
 
 }
