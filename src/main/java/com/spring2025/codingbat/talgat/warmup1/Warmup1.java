@@ -89,5 +89,10 @@ public class Warmup1 {
         return (str.length()>3) ? str.substring(0,3)+str.substring(0,3)+str.substring(0,3):str + str + str;
     }
 
+    public String backAround(String str) {
+        return (str.length() >= 1) ? str.charAt(str.length()-1)+str+str.charAt(str.length()-1):str;
+    }
+
+
 
 }
