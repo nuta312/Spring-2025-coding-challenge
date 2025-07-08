@@ -122,4 +122,21 @@ public class Warmup {
         return result;
     }
 
+    public String stringX(String str) {
+        String result = "";
+        if (str.length() > 2) {
+            result = str.substring(0, 1);
+            for (int i = 1; i < str.length() - 1; i++) {
+                if (str.charAt(i) != 'x') {
+                    result += str.charAt(i);
+                }
+            }
+            result = result + str.substring(str.length() - 1);
+        }else {
+            result = str;
+        }
+        return result;
+    }
+
+
 }
