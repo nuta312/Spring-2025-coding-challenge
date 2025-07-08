@@ -397,4 +397,21 @@ public class String1 {
         return str.substring(mid - 1, mid + 1);
     }
 
+    /**
+     Задача 28 - twoChar
+
+     Return 2 chars starting at index. If index is invalid, return first 2 chars.
+
+     twoChar("java", 0) → "ja"
+     twoChar("java", 2) → "va"
+     twoChar("java", 3) → "ja"
+     */
+    public String twoChar(String str, int index) {
+        if (index < 0 || index + 1 >= str.length()) {
+            return str.substring(0, 2);
+        }
+        return str.substring(index, index + 2);
+    }
+
+
 }
