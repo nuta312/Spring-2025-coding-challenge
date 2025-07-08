@@ -147,4 +147,7 @@ public class Warmup1 {
         return (str.length() < 3) ? false : (str.substring(1,3).equals("ix"));
     }
 
+    public String startOz(String str) {
+        return (str.length() == 0)? str : (str.length() == 1)? str : (str.substring(0,2).equals("oz")) ? "oz" : (str.substring(1,2).equals("z")) ? "z" : (str.substring(0,1).equals("o")) ? "o" : "";
+    }
 }
