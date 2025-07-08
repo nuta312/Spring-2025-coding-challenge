@@ -331,4 +331,17 @@ public class String1 {
         return str;
     }
 
+    /**
+     Задача 23 - makeTags
+
+     Given tag and word strings, create the HTML string with tags around the word.
+
+     makeTags("i", "Yay") → "<i>Yay</i>"
+     makeTags("i", "Hello") → "<i>Hello</i>"
+     makeTags("cite", "Yay") → "<cite>Yay</cite>"
+     */
+    public String makeTags(String tag, String word) {
+        return "<" + tag + ">" + word + "</" + tag + ">";
+    }
+
 }
