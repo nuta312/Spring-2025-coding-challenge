@@ -125,8 +125,8 @@ public class Warmup1 {
 
     /**
      * Given a string, return a new string where the first and last chars have been exchanged.
-     * <p>
-     * <p>
+     *
+     *
      * frontBack("code") → "eodc"
      * frontBack("a") → "a"
      * frontBack("ab") → "ba"
@@ -151,6 +151,21 @@ public class Warmup1 {
     public String front3(String str) {
         String front = str.length() < 3 ? str : str.substring(0, 3);
         return front + front + front;
+    }
+    /**
+     Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+
+
+     backAround("cat") → "tcatt"
+     backAround("Hello") → "oHelloo"
+     backAround("a") → "aaa"
+     */
+    public String backAround(String str) {
+        if (str.length() == 1) {
+            return str + str + str;
+        }
+        char lastChar = str.charAt(str.length() - 1);
+        return lastChar + str + lastChar;
     }
 }
 
