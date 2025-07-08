@@ -413,5 +413,20 @@ public class String1 {
         return str.substring(index, index + 2);
     }
 
+    /**
+     Задача 29 - atFirst
+
+     Return first 2 chars of string. If shorter, use '@' for missing chars.
+
+     atFirst("hello") → "he"
+     atFirst("hi") → "hi"
+     atFirst("h") → "h@"
+     */
+    public String atFirst(String str) {
+        if (str.length() >= 2) return str.substring(0, 2);
+        if (str.length() == 1) return str + "@";
+        return "@@";
+    }
+
 
 }
