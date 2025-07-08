@@ -138,5 +138,21 @@ public class Warmup {
         return result;
     }
 
+    public String altPairs(String str) {
+        String t = "";
+        int count = 0;
+        int lCount = 2;
+        while (count<str.length()){
+            if (lCount<=str.length()) {
+                t += str.substring(count, lCount);
+            }else {
+                t += str.substring(count);
+            }
+            count += 4;
+            lCount += 4;
+        }
+        return t;
+    }
+
 
 }
