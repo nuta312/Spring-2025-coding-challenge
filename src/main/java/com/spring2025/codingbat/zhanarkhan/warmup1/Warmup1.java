@@ -154,4 +154,10 @@ public class Warmup1 {
     public int intMax(int a, int b, int c) {
         return (a > b && a > c)? a : (b > a && b > c)? b : (c > a && c > b)? c : 0;
     }
+
+    public int close10(int a, int b) {
+        int correctA = Math.abs(a - 10);
+        int correctB = Math.abs(b - 10);
+        return (correctA == correctB)? 0 :  (correctA < correctB) ? a : b;
+    }
 }
