@@ -30,5 +30,18 @@ public class String1 {
         return str.substring(0, str.length() / 2);
     }
 
+    /**
+     Задача 3 - makeOutWord
+
+     Given an "out" string length 4, such as "<<>>", and a word,
+     return a new string where the word is in the middle of the out string.
+
+     makeOutWord("<<>>", "Yay") → "<<Yay>>"
+     makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+     makeOutWord("[[]]", "word") → "[[word]]"
+     */
+    public String makeOutWord(String out, String word) {
+        return out.substring(0, 2) + word + out.substring(2);
+    }
 
 }
