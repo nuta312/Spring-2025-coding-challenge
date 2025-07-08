@@ -181,4 +181,10 @@ public class Warmup1 {
         }
         return (count >= 1 && count <= 3);
     }
+
+    public boolean lastDigit(int a, int b) {
+        int lastA = a % 10;
+        int lastB = b % 10;
+        return (lastA == lastB);
+    }
 }
