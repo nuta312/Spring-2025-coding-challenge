@@ -490,12 +490,20 @@ public class String1 {
      */
     public String withoutX2(String str) {
         String result = str;
-        if (str.length() >= 1 && str.charAt(0) == 'x') {
-            result = result.substring(1);
+
+        if (str.length() >= 2) {
+            String first = str.substring(0, 1);
+            String second = str.substring(1, 2);
+            result = "";
+
+            if (!first.equals("x")) result += first;
+            if (!second.equals("x")) result += second;
+
+            result += str.substring(2);
+        } else if (str.length() == 1) {
+            result = str.charAt(0) == 'x' ? "" : str;
         }
-        if (result.length() >= 1 && result.charAt(0) == 'x') {
-            result = result.substring(1);
-        }
+
         return result;
     }
 
