@@ -41,4 +41,12 @@ public class String2 {
         }
         return cc;
     }
+    public boolean endOther(String a, String b) {
+        String aLow = a.toLowerCase();
+        String bLow = b.toLowerCase();
+        if(aLow.endsWith(bLow)) return true;
+        if(bLow.endsWith(aLow)) return true;
+
+        return false;
+    }
 }
