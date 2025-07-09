@@ -117,4 +117,22 @@ public class Functional1 {
        }
        return addStar;
    }
+
+   //Given a list of integers, return a list where each integer is added to 1 and the result is multiplied by 10.
+   //
+   //
+   //math1([1, 2, 3]) → [20, 30, 40]
+   //math1([6, 8, 6, 8, 1]) → [70, 90, 70, 90, 20]
+   //math1([10]) → [110]
+
+   public static List<Integer>math1(List<Integer> nums){
+
+       List<Integer> result=new ArrayList<>();
+       for(int i=0; i<nums.size(); i++){
+           int value= (nums.get(i) +1) *10;
+           result.add(value);
+
+       }
+       return result;
+   }
 }
