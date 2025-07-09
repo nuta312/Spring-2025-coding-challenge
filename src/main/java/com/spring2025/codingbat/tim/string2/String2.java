@@ -82,4 +82,21 @@ public class String2 {
         }
         return true;
     }
+    public String mixString(String a, String b) {
+        String result = "";
+        int maxLen = Math.max(a.length(), b.length());
+        for(int i=0;i<maxLen;i++){
+            if(i<a.length()){
+                result+=a.charAt(i);
+            }
+            if(i<b.length()){
+                result+=b.charAt(i);
+            }
+        }
+
+
+
+
+        return result;
+    }
 }
