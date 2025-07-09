@@ -119,4 +119,26 @@ public class String2 {
         }
         return result;
     }
+    public String repeatSeparator(String word, String sep, int count) {
+        String result ="";
+        for(int i=0;i<count;i++){
+
+            result += word;
+            if(i<count-1){
+                result+=sep;
+            }
+        }
+        return result;
+    }
+    public boolean prefixAgain(String str, int n) {
+        String prefix = str.substring(0,n);
+//for(int i =0;i<str.length()-n;i++){
+        if(str.substring(n).contains(prefix)){
+            return true;
+        }
+
+        return false;
+
+    }
+
 }
