@@ -384,6 +384,27 @@ startOz("oxx") → "o"
 
         return max;
     }
+    /*
+   Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number.
+
+
+close10(8, 13) → 8
+close10(13, 8) → 8
+close10(13, 7) → 0
+    */
+    public int close10(int a, int b) {
+        int a_diff = Math.abs(a - 10);
+        int d_diff = Math.abs(b - 10);
+        if (a_diff > d_diff) {
+            return b;
+        }
+        if (d_diff > a_diff) {
+            return a;
+        }
+
+
+        return 0;
+    }
 
 
 
