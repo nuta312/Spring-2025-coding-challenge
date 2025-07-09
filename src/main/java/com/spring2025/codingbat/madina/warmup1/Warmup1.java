@@ -79,5 +79,8 @@ public class Warmup1 {
         if(str.length() < 2) return str;
         return str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
     }
+    public String front3(String str) {
+        return (str.length() >= 3) ? str.substring(0, 3).concat(str.substring(0, 3)).concat(str.substring(0, 3)) : str.concat(str).concat(str);
+    }
 
 }
