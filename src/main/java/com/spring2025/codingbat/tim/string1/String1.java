@@ -8,6 +8,7 @@ public class String1 {
         System.out.println(s.extraEnd("bicycle"));
         System.out.println(s.firstTwo("Collatheral"));
         System.out.println(s.withoutEnd("Kingsman"));
+        System.out.println(s.comboString(" James ", "Bond"));
     }
     public String helloName(String name) {
         String hname = "Hello "+name+"!";
@@ -28,6 +29,12 @@ public class String1 {
     }
     public String withoutEnd(String str) {
         return str.substring(1, str.length()-1);
+    }
+    public String comboString(String a, String b) {
+        if(a.length()>b.length()){
+            return b+a+b;
+        }
+        return a+b+a;
     }
 
 }
