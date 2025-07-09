@@ -24,4 +24,12 @@ public class Functional1 {
     public List<String> copies3(List<String> strings) {
         return strings.stream().map(s -> s+s+s).collect(Collectors.toList());
     }
+
+    public List<String> moreY(List<String> strings) {
+        return strings.stream().map(s -> "y"+s+"y").collect(Collectors.toList());
+    }
+
+    public List<Integer> math1(List<Integer> nums) {
+        return nums.stream().map(n -> (n+1) * 10).collect(Collectors.toList());
+    }
 }
