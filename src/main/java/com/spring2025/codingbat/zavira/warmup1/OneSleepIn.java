@@ -1,6 +1,6 @@
 package com.spring2025.codingbat.zavira.warmup1;
 
-public class WarmUp1 {
+public class OneSleepIn {
     public static void main(String[] args) {
 
     }
