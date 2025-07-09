@@ -230,4 +230,32 @@ public class String2 {
         }
         return res;
     }
+    /**
+     * Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and ending with 'p'. Return a string where for all such words, the middle letter is gone, so "zipXzap" yields "zpXzp".
+     *
+     *
+     * zipZap("zipXzap") → "zpXzp"
+     * zipZap("zopzop") → "zpzp"
+     * zipZap("zzzopzop") → "zzzpzp"
+     */
+    public String zipZap(String str) {
+        String res = "";
+        int i = 0;
+        while (i <= str.length() - 3) {
+            String group = str.substring(i, i + 3);
+            if (group.charAt(0) == 'z' && group.charAt(2) == 'p') {
+                res += group.charAt(0);
+                res += group.charAt(2);
+                i += 3;
+            } else {
+                res += str.charAt(i);
+                i++;
+            }
+        }
+        while (i < str.length()) {
+            res += str.charAt(i);
+            i++;
+        }
+        return res;
+    }
 }
