@@ -20,4 +20,16 @@ public class Fuctional2 {
     public List<Integer> noTeen(List<Integer> nums) {
         return nums.stream().filter(n -> n < 13 || n > 19).collect(Collectors.toList());
     }
+
+    public List<String> noZ(List<String> strings) {
+        return strings.stream().filter(s -> !s.contains ("z")).collect(Collectors.toList());
+    }
+
+    public List<String> noLong(List<String> strings) {
+        return strings.stream().filter(l -> l.length() < 4).collect(Collectors.toList());
+    }
+
+    public List<String> no34(List<String> strings) {
+        return strings.stream().filter(w -> w.length() != 3 && w.length() != 4).collect(Collectors.toList());
+    }
 }
