@@ -9,3 +9,5 @@
 
 # Ignore VS configurations
 .idea/vcs.xml
+
+target/
