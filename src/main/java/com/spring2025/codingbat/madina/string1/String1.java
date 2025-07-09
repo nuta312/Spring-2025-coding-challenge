@@ -314,6 +314,53 @@ public class String1 {
            return str;
        }
    }
+   /* Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+    deFront("Hello") → "llo"
+    deFront("java") → "va"
+    deFront("away") → "aay"
+    */
+   public String deFront(String str) {
+       String result = "";
+       if (str.length() >=1 && str.charAt(0) == 'a') {
+           result += str.charAt(0);
+       }
+       if (str.length() >=2 && str.charAt(1) == 'b') {
+           result += str.charAt(1);
+       }
+       return result+=str.substring(2);
+   }
+   /* Given a string and a second "word"
+    string, we'll say that the word matches
+     the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+    startWord("hippo", "hi") → "hi"
+    startWord("hippo", "xip") → "hip"
+    startWord("hippo", "i") → "h"*/
+   public String startWord(String str, String word) {
+       if (str.length() >= word.length() && word.substring(1).equals(str.substring(1, word.length()))) {
+           return str.substring(0, word.length());
+       }
+       return "";
+   }
+  /*  Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
+    withoutX("xHix") → "Hi"
+    withoutX("xHi") → "Hi"
+    withoutX("Hxix") → "Hxi"
+     */
+  public String withoutX(String str) {
+      if(str.length()==0)
+          return "";
+      if (str.startsWith("x") ) {
+          str=str.substring(1);
+      }
+      if (str.endsWith("x")) {
+          return str.substring(0, str.length() - 1);
+      }
+      return str;
+  }
+
+
+
+
 
 
 }
