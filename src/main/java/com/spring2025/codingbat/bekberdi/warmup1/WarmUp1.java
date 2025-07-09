@@ -98,4 +98,10 @@ public class WarmUp1 {
         String last = str.substring(str.length()-1, str.length());
         return last + str + last;
     }
+    public boolean or35(int n) {
+        if(n % 5 == 0 || n % 3 == 0){
+            return true;
+        }
+        return false;
+    }
 }
