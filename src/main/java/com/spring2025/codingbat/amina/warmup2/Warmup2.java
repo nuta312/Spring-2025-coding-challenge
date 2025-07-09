@@ -115,5 +115,24 @@ public class Warmup2 {
         return true;
     }
 
+    /**
+     Task 7 – frontTimes
+
+     Given a string and a non-negative int n,
+     return n copies of the front (first 3 chars or whole string if shorter).
+
+     frontTimes("Chocolate", 2) → "ChoCho"
+     frontTimes("Chocolate", 3) → "ChoChoCho"
+     frontTimes("Abc", 3) → "AbcAbcAbc"
+     */
+    public String frontTimes(String str, int n) {
+        String front = str.length() < 3 ? str : str.substring(0, 3);
+        String result = "";
+        for (int i = 0; i < n; i++) {
+            result += front;
+        }
+        return result;
+    }
+
 
 }
