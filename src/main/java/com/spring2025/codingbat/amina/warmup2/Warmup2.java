@@ -96,5 +96,24 @@ public class Warmup2 {
         return result;
     }
 
+    /**
+     Task 6 – noTriples
+
+     Given an array of ints, return true if the array does not contain any triples.
+     A triple is a value appearing 3 times in a row.
+
+     noTriples([1, 1, 2, 2, 1]) → true
+     noTriples([1, 1, 2, 2, 2, 1]) → false
+     noTriples([1, 1, 1, 2, 2, 2, 1]) → false
+     */
+    public boolean noTriples(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 }
