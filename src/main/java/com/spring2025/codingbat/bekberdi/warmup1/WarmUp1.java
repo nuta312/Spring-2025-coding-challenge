@@ -155,4 +155,13 @@ public class WarmUp1 {
             return false;
         }
     }
+    public String startOz(String str) {
+        if(str.startsWith("oz")){
+            return "oz";
+        }else if(str.startsWith("z", 1)){
+            return "z";
+        }else if (str.startsWith("o")) {
+            return "o";
+        }return "";
+    }
 }
