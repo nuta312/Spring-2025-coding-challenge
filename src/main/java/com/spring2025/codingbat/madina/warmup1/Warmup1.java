@@ -86,5 +86,7 @@ public class Warmup1 {
         String r = str.substring(str.length() -1);
         return (str.length() >= 2) ? r+str+r : str+str+str;
     }
-
+    public boolean or35(int n) {
+        return (n % 3 == 0 || n % 5 == 0) ? true : false;
+    }
 }
