@@ -28,16 +28,16 @@ public class Functional1 {
     //copies3(["24", "a", ""]) → ["242424", "aaa", ""]
     //copies3(["hello", "there"]) → ["hellohellohello", "theretherethere"]
 
-//    public static List<String> copies3(List<String>strings){
-//        List<String>result=new ArrayList<>();
-//
-//        for(String s:strings){
-//            StringBuilder tripled=new StringBuilder();
-//            for(int i=0; i<3; i++){
-//                tripled.append(s);
-//            }
-//            result.add(tripled.toString());
-//        }
-//        return result;
-//    }
+    public static List<String> copies3(List<String>strings){
+        List<String>result=new ArrayList<>();
+
+        for(String s:strings){
+            StringBuilder tripled=new StringBuilder();
+           for(int i=0; i<3; i++){
+               tripled.append(s);
+            }
+            result.add(tripled.toString());
+        }
+       return result;
+   }
 }
