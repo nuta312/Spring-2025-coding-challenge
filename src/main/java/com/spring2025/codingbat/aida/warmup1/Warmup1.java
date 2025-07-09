@@ -167,4 +167,10 @@ public class Warmup1 {
     public boolean icyHot(int temp1, int temp2) {
         return (temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0);
     }
+
+    // Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+
+    public boolean in1020(int a, int b) {
+        return (a >= 10 && a <= 20) || (b >= 10 && b <= 20);
+    }
 }
