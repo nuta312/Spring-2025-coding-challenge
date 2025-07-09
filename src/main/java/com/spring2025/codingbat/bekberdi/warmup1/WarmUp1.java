@@ -141,4 +141,11 @@ public class WarmUp1 {
 
         return (aTeen && !bTeen) || (!aTeen && bTeen);
     }
+    public String delDel(String str) {
+        if(str.startsWith("del", 1)){
+            return str.substring(0, 1) + str.substring(4, str.length());
+        }else {
+            return str;
+        }
+    }
 }
