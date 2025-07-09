@@ -503,8 +503,19 @@ public class String1 {
         } else if (str.length() == 1) {
             result = str.charAt(0) == 'x' ? "" : str;
         }
-
         return result;
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
