@@ -56,4 +56,9 @@ public class Warmup1 {
             return false;
         }
     }
+    public boolean nearHundred(int n) {
+        boolean near100 = (n >= 90 && n <= 110);
+        boolean near200 = (n >= 190 && n <= 210);
+        return near100 || near200;
+    }
 }
