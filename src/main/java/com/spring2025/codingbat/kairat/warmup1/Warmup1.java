@@ -32,7 +32,7 @@ public class Warmup1 {
     monkeyTrouble(true, false) → false*/
 
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        return aSmile ==bSmile;
+        return aSmile == bSmile;
     }
 
     /*Given two int values, return their sum.
@@ -44,8 +44,8 @@ public class Warmup1 {
          sumDouble(2, 2) → 8*/
 
     public int sumDouble(int a, int b) {
-        if(a==b) return (a+b)*2;
-        return a+b;
+        if (a == b) return (a + b) * 2;
+        return a + b;
     }
 
     /*Given an int n, return the
@@ -58,7 +58,7 @@ public class Warmup1 {
      diff21(21) → 0*/
 
     public int diff21(int n) {
-        return (n>=21) ?( n-21)*2 : 21-n;
+        return (n >= 21) ? (n - 21) * 2 : 21 - n;
     }
 
     /*We have a loud talking parrot.
@@ -73,9 +73,9 @@ public class Warmup1 {
      parrotTrouble(false, 6) → false*/
 
     public boolean parrotTrouble(boolean talking, int hour) {
-        if(talking&&(hour<7||hour>20)){
+        if (talking && (hour < 7 || hour > 20)) {
             return true;
-        }else return false;
+        } else return false;
     }
 
 
@@ -86,7 +86,7 @@ public class Warmup1 {
     makes10(1, 9) → true*/
 
     public boolean makes10(int a, int b) {
-        return (a==10||b==10)||a+b==10;
+        return (a == 10 || b == 10) || a + b == 10;
     }
 
    /* Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
@@ -96,25 +96,28 @@ public class Warmup1 {
     nearHundred(89) → false*/
 
     public boolean nearHundred(int n) {
-        int a =n-100;
-        int b =n-200;
-        if((Math.abs(a)<=10)||(Math.abs(b)<=10)){
+        int a = n - 100;
+        int b = n - 200;
+        if ((Math.abs(a) <= 10) || (Math.abs(b) <= 10)) {
             return true;
-        }else return false;
+        } else return false;
     }
 
+    /*Given 2 int values, return true if one is negative and one is positive.
+      Except if the parameter "negative" is true, then return true only if both are negative.
 
+    posNeg(1, -1, false) → true
+    posNeg(-1, 1, false) → true
+    posNeg(-4, -5, true) → true*/
 
+    public boolean posNeg(int a, int b, boolean negative) {
 
-
-
-
-
-
-
-
-
-
+        if (a < 0 && b < 0 && negative) {
+            return true;
+        } else if (((a > 0 && b < 0) || (a < 0 && b > 0)) && !negative) {
+            return true;
+        } else return false;
+    }
 
 
 }
