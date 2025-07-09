@@ -38,4 +38,12 @@ public class Functional1 {
     public List<String> moreY(List<String> strings) {
         return strings.stream().map(n -> "y" + n + "y").collect(Collectors.toList());
     }
+
+    //Given a list of strings, return a list where each string has all its "x" removed.
+
+    public List<String> noX(List<String> strings) {
+        return strings.stream().map(n -> n.replace("x", "")).collect(Collectors.toList());
+    }
+
+
 }
