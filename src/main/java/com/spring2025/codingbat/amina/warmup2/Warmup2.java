@@ -35,6 +35,30 @@ public class Warmup2 {
         return index != -1 && index + 1 < str.length() && str.charAt(index + 1) == 'x';
     }
 
+    /**
+     Task 3 – last2
+
+     Given a string, return the count of the number of times that a substring of length 2
+     appears in the string and also as the last 2 chars of the string.
+     Do not count the last substring itself.
+
+     last2("hixxhi") → 1
+     last2("xaxxaxaxx") → 1
+     last2("axxxaaxx") → 2
+     */
+    public int last2(String str) {
+        if (str.length() < 2) return 0;
+
+        String end = str.substring(str.length() - 2);
+        int count = 0;
+
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 2).equals(end)) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 
 }
