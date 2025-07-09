@@ -6,7 +6,8 @@ package com.spring2025.codingbat.elvira.warmup1;
 public class Warmup1 {
 
     /**
-     * The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+     * The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
+     * We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
      * <p>
      * <p>
      * sleepIn(false, false) → true
@@ -23,7 +24,8 @@ public class Warmup1 {
     }
 
     /**
-     * We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
+     * We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
+     * We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
      * <p>
      * <p>
      * monkeyTrouble(true, true) → true
@@ -80,8 +82,9 @@ public class Warmup1 {
     }
 
     /**
-     * We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
-     * <p>
+     * We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
+     * We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
+     *
      * <p>
      * parrotTrouble(true, 6) → true
      * parrotTrouble(true, 7) → false
@@ -196,7 +199,8 @@ public class Warmup1 {
     }
 
     /**
-     * Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+     * Given a string, take the last char and return a new string with the last char added at the front and back,
+     * so "cat" yields "tcatt". The original string will be length 1 or more.
      * <p>
      * <p>
      * backAround("cat") → "tcatt"
@@ -210,7 +214,8 @@ public class Warmup1 {
     }
 
     /**
-     * Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
+     * Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
+     * Use the % "mod" operator -- see Introduction to Mod
      * <p>
      * <p>
      * or35(3) → true
@@ -223,7 +228,8 @@ public class Warmup1 {
     }
 
     /**
-     * Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+     * Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back,
+     * so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
      * <p>
      * <p>
      * front22("kitten") → "kikittenki"
@@ -412,7 +418,8 @@ public class Warmup1 {
     }
 
     /**
-     * Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
+     * Given 2 int values, return true if they are both in the range 30..40 inclusive,
+     * or they are both in the range 40..50 inclusive.
      * <p>
      * <p>
      * in3050(30, 31) → true
@@ -425,7 +432,8 @@ public class Warmup1 {
     }
 
     /**
-     * Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
+     * Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
+     * or return 0 if neither is in that range.
      * <p>
      * <p>
      * max1020(11, 19) → 19
@@ -468,7 +476,9 @@ public class Warmup1 {
     }
 
     /**
-     * Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+     * Given two non-negative int values,
+     * return true if they have the same last digit, such as with 27 and 57.
+     * Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
      *
      *
      * lastDigit(7, 17) → true
@@ -481,7 +491,9 @@ public class Warmup1 {
     }
 
     /**
-     * Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string.
+     * Given a string, return a new string where the last 3 chars are now in upper case.
+     * If the string has less than 3 chars, uppercase whatever is there.
+     * Note that str.toUpperCase() returns the uppercase version of a string.
      *
      *
      * endUp("Hello") → "HeLLO"
@@ -501,7 +513,10 @@ public class Warmup1 {
     }
 
     /**
-     * Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+     * Given a non-empty string and an int N,
+     * return the string made starting with char 0,
+     * and then every Nth char of the string.
+     * So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
      *
      *
      * everyNth("Miracle", 2) → "Mrce"
