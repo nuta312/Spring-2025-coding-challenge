@@ -7,5 +7,9 @@
 .idea/tasks.xml
 .idea/dictionaries
 
+# Maven / Gradle build output
+target/
+build/
+
 # Ignore VS configurations
 .idea/vcs.xml
