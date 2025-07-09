@@ -71,4 +71,11 @@ public class WarmUp1 {
 
         return "not " + str;
     }
+    public String missingChar(String str, int n) {
+        StringBuilder sb1 = new StringBuilder(str);
+        sb1.deleteCharAt(n);
+        String str1 = String.valueOf(sb1);
+        return str1;
+    }
+
 }
