@@ -13,5 +13,16 @@ public class String1 {
       String hello = "Hello " + name + "!";
       return hello;
   }
+    /*Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+    makeAbba("Hi", "Bye") → "HiByeByeHi"
+    makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+    makeAbba("What", "Up") → "WhatUpUpWhat"
+     */
+    public String makeAbba(String a, String b) {
+        String s1 = a+b ;
+        String s2=b+a;
+        return s1+s2;
+    }
+
 
 }
