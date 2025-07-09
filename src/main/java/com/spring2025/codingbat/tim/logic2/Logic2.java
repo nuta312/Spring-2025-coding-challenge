@@ -10,5 +10,19 @@ public class Logic2 {
         if(goal%5 <= small) return true;
         return false;
     }
-
+    public int loneSum(int a, int b, int c) {
+        if(a != b && a !=c && b != c){
+            return a + b +c;
+        }
+        if(a == b && a ==c && b == c){
+            return 0;
+        }
+        if(a == b){
+            return c;
+        }
+        if(a == c){
+            return b;
+        }
+        return a;
+    }
 }
