@@ -243,6 +243,15 @@ public class String1 {
         }
     }
 
+    /* Given a string of any length, return a new string where the last 2 chars,
+    if present, are swapped, so "coding" yields "codign".*/
 
+    public String lastTwo(String str) {
+
+        if (str.length() <= 1) return str;
+        String last = str.substring(str.length()-2);
+        String newStr = new StringBuilder(last).reverse().toString();
+        return str.substring(0,str.length()-2) + newStr;
+    }
 
 }
