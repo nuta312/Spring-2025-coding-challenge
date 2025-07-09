@@ -135,4 +135,21 @@ public class Functional1 {
        }
        return result;
    }
+
+
+   //Given a list of strings, return a list where each string has all its "x" removed.//noX(["ax", "bb", "cx"]) → ["a", "bb", "c"]
+    //noX(["xxax", "xbxbx", "xxcx"]) → ["a", "bb", "c"]
+    //noX(["x"]) → [""]
+
+   public static List<String> noX(List<String>strings){
+
+       List<String> result=new ArrayList<>();
+       for(String s: strings){
+           String str=s.replace("x", "");
+           result.add(str);
+
+
+       }
+       return result;
+   }
 }
