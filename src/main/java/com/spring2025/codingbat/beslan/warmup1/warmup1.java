@@ -292,6 +292,7 @@ posNeg(-4, -5, true) → true
     public boolean hasTeen(int a, int b, int c) {
         return a >= 13 && a <= 19 || b >= 13 && b <= 19 || c >= 13 && c <= 19;
     }
+
     /*
     We'll say that a number is "teen" if it is in the range 13..19 inclusive.
     Given 2 int values, return true if one or the other is teen, but not both.
@@ -304,8 +305,25 @@ posNeg(-4, -5, true) → true
         boolean aTeen = (a >= 13 && a <= 19);
         boolean bTeen = (b >= 13 && b <= 19);
 
-
         return (aTeen && !bTeen) || (!aTeen && bTeen);
+    }
+
+    /*
+    Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted.
+    Otherwise, return the string unchanged.
+
+    delDel("adelbc") → "abc"
+    delDel("adelHello") → "aHello"
+    delDel("adedbc") → "adedbc"
+     */
+    public String delDel(String str) {
+        String result = "";
+        if (str.length() >= 4 && str.substring(1, 4).equals("del")) {
+            result = str.substring(0, 1) + str.substring(4, str.length());
+        } else {
+            result = str;
+        }
+        return result;
     }
 }
 
