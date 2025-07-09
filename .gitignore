@@ -1,11 +1,19 @@
-# Ignore IntelliJ IDEA project files
+# IntelliJ IDEA
 .idea/
 *.iml
 
-# Optionally, ignore workspace.xml and tasks.xml only
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
+# Gradle
+.gradle/
+build/
+out/
+
+# Java
+*.class
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Ignore VS configurations
 .idea/vcs.xml
