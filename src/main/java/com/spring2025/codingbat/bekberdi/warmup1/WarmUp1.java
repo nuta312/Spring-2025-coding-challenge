@@ -173,4 +173,15 @@ public class WarmUp1 {
             return c;
         }
     }
+    public int close10(int a, int b) {
+        int num1 = 10 - a;
+        int num2 = 10 - b;
+        if(Math.abs(num1) < Math.abs(num2)){
+            return a;
+        } else if (Math.abs(num2) < Math.abs(num1)) {
+            return b;
+        }else {
+            return 0;
+        }
+    }
 }
