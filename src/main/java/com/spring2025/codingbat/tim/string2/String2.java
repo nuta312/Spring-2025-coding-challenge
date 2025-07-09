@@ -4,6 +4,7 @@ public class String2 {
     public static void main(String[] args) {
         String2 s = new String2();
         System.out.println(s.doubleChar("Hello"));
+        System.out.println(s.countHi("hilarious"));
     }
     public String doubleChar(String str) {
         String loop = "";
@@ -12,5 +13,15 @@ public class String2 {
             //loop += str.charAt(i);
         }
         return loop.toString();
+    }
+    public int countHi(String str) {
+        int count = 0;
+        for(int i = 0; i<str.length()-1;i++){
+            if(str.substring(i,i+2).equals("hi")){
+                count +=1;
+            }
+
+        }
+        return count;
     }
 }
