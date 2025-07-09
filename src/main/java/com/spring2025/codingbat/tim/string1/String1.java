@@ -6,6 +6,7 @@ public class String1 {
         System.out.println(s.helloName("Bob"));
         System.out.println(s.makeTags("<", "hi"));
         System.out.println(s.extraEnd("bicycle"));
+        System.out.println(s.firstTwo("Collatheral"));
     }
     public String helloName(String name) {
         String hname = "Hello "+name+"!";
@@ -18,5 +19,10 @@ public class String1 {
         String last2 = str.substring(str.length() - 2);
         return last2 + last2 +last2;
     }
+    public String firstTwo(String str) {
+        if(str.length()>1){
 
+            return str.substring(0,2);}
+        return str;
+    }
 }
