@@ -149,4 +149,23 @@ public class String2 {
         }
         return false;
     }
+    public String getSandwich(String str) {
+        String result= "";
+        int first = str.indexOf("bread");
+        int last = str.lastIndexOf("bread");
+        if(first == last) return "";
+        if(str.length()<5 || first+5 > str.length() || last +5>str.length() || !str.contains("bread")) return "";
+        String sfirst = str.substring(first, first+5);
+        String slast = str.substring(last, last+5);
+
+        if(str.contains(sfirst) && str.contains(slast)){
+            result = str.substring(first+5, last);
+
+        } else{
+            return "";
+        }
+
+
+        return result;
+    }
 }
