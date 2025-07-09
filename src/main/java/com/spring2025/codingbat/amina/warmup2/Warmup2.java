@@ -168,6 +168,27 @@ public class Warmup2 {
         return count;
     }
 
+    /**
+     Task 10 – stringMatch
+
+     Given 2 strings, return the number of positions where they contain the same length 2 substring.
+
+     stringMatch("xxcaazz", "xxbaaz") → 3
+     stringMatch("abc", "abc") → 2
+     stringMatch("abc", "axc") → 0
+     */
+    public int stringMatch(String a, String b) {
+        int len = Math.min(a.length(), b.length());
+        int count = 0;
+
+        for (int i = 0; i < len - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
 
 }
