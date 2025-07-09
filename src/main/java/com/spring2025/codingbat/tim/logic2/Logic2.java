@@ -91,4 +91,26 @@ public class Logic2 {
         return min;
 
     }
+    public boolean evenlySpaced(int a, int b, int c) {
+        int maxVal = Math.max(a,b);
+        int max = Math.max(maxVal,c);
+        int minVal = Math.min(a,b);
+        int min = Math.min(minVal,c);
+        int middle;
+        if ((a >= b && a <= c) || (a <= b && a >= c)) {
+            middle = a;
+        } else if ((b >= a && b <= c) || (b <= a && b >= c)) {
+            middle = b;
+        } else {
+            middle = c;
+        }
+        int diff1 = Math.abs(max - middle);
+        int diff2 = Math.abs(middle -min);
+        //int diff3 = Math.abs(a-c);
+        if(diff1 == diff2){
+            return true;
+        }
+
+        return false;
+    }
 }
