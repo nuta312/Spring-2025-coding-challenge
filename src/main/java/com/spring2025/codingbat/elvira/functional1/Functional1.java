@@ -32,4 +32,18 @@ public class Functional1 {
     public List<Integer> math1(List<Integer> nums) {
         return nums.stream().map(n -> (n+1) * 10).collect(Collectors.toList());
     }
+
+    public List<Integer> rightDigit(List<Integer> nums) {
+        return nums.stream().map(n -> n % 10).collect(Collectors.toList());
+    }
+
+    public List<String> lower(List<String> strings) {
+        return strings.stream().map(s -> s.toLowerCase()).collect(Collectors.toList());
+    }
+
+    public List<String> noX(List<String> strings) {
+        return strings.stream().map(n -> n.replaceAll("x", "")).collect(Collectors.toList());
+    }
+
+
 }
