@@ -151,4 +151,14 @@ public class Warmup1 {
         String front = str.length() <= 2 ? str : str.substring(0, 2);
         return front + str + front;
     }
+
+    // Given a string, return true if the string starts with "hi" and false otherwise.
+
+    public boolean startHi(String str) {
+        if(str.startsWith("hi")){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
