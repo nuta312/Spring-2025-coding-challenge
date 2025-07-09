@@ -83,4 +83,77 @@ public class Logic1 {
     public int sortaSum(int a, int b) {
         return ((a + b) > 9 &&  (a + b) < 20) ? 20 : a + b;
     }
+
+    /*
+    Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation,
+     return a string of the form "7:00" indicating when the alarm clock should ring.
+    Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00".
+    Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off"
+     */
+
+    public String alarmClock(int day, boolean vacation) {
+        if (vacation) {
+            if (day > 0 && day <= 5) {
+                return "10:00";
+            } else {
+                return "off";
+            }
+        } else {
+            if (day > 0 && day <= 5) {
+                return "7:00";
+            } else {
+                return "10:00";
+            }
+        }
+    }
+
+    /*
+    The number 6 is a truly great number. Given two int values, a and b, return true if either one is 6.
+     Or if their sum or difference is 6. Note: the function Math.abs(num) computes the absolute value of a number.
+     */
+
+    public boolean love6(int a, int b) {
+        int s = a + b;
+        int s2 = Math.abs(a-b);
+
+        return  a == 6 || b == 6 ? true : s == 6 || s2 == 6 ? true : false;
+    }
+
+    /*
+    Given a number n, return true if n is in the range 1..10, inclusive.
+     Unless outsideMode is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.
+     */
+
+    public boolean in1To10(int n, boolean outsideMode) {
+        if (outsideMode) {
+            return n <= 1 || n >= 10 ? true : false;
+        } else {
+            return n >=1 && n <=10 ? true : false;
+        }
+    }
+
+    /*
+    We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
+    Return true if the given non-negative number is special. Use the % "mod" operator -- see Introduction to Mod
+     */
+
+    public boolean specialEleven(int n) {
+        return n % 11 == 0 || (n - 1) % 11 == 0 ;
+    }
+
+    /*
+     Return true if the given non-negative number is 1 or 2 more than a multiple of 20. See also: Introduction to Mod
+     */
+
+    public boolean more20(int n) {
+        return (n - 1) % 20 == 0 || (n-2) % 20 == 0;
+    }
+
+    /*
+    Return true if the given non-negative number is a multiple of 3 or 5, but not both. Use the % "mod" operator -- see Introduction to Mod
+     */
+
+    public boolean old35(int n) {
+        return (n % 3 == 0 && n % 5 != 0) || (n % 5 == 0 && n % 3 != 0);
+    }
 }
