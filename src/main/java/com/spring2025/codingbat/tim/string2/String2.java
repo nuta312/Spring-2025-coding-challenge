@@ -63,4 +63,13 @@ public class String2 {
 
 
     }
+    public boolean bobThere(String str) {
+        for(int i =0; i<str.length()-2;i++){
+            if(str.substring(i,i+3).startsWith("b") && str.substring(i,i+3).endsWith("b")){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
