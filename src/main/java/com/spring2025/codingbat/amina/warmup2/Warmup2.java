@@ -20,6 +20,21 @@ public class Warmup2 {
         }
         return result;
     }
+    /**
+     Task 2 – doubleX
+
+     Given a string, return true if the first instance of "x"
+     in the string is immediately followed by another "x".
+
+     doubleX("axxbb") → true
+     doubleX("axaxax") → false
+     doubleX("xxxxx") → true
+     */
+    public boolean doubleX(String str) {
+        int index = str.indexOf("x");
+        return index != -1 && index + 1 < str.length() && str.charAt(index + 1) == 'x';
+    }
+
 
 
 }
