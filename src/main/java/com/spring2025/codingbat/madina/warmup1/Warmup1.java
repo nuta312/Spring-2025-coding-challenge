@@ -181,5 +181,13 @@ oth the front and back, so "kitten" yields"kikittenki". If the string length is 
 public String front22(String str) {
     return (str.length() >= 2)? str.substring(0,2) + str + str.substring(0,2) : str+str+str;
 }
+/*Given a string, return true if the string starts with "hi" and false otherwise.
+startHi("hi there") → true
+startHi("hi") → true
+startHi("hello hi") → false
+ */
+public boolean startHi(String str) {
+    return (str.startsWith("hi")) ? true : false;
+}
 
 }
