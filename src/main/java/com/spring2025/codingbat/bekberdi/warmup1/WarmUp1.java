@@ -55,4 +55,13 @@ public class WarmUp1 {
             return false;
         }
     }
+    public boolean posNeg(int a, int b, boolean negative) {
+        if(a > 0 && b < 0 && negative == false || a < 0 && b > 0 && negative == false){
+            return true;
+        }else if(negative == true && a < 0 && b < 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
