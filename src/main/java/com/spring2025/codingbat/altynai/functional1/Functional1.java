@@ -102,4 +102,19 @@ public class Functional1 {
        }
        return result;
    }
+
+   //Given a list of strings, return a list where each string has "*" added at its end.
+    //
+    //
+    //addStar(["a", "bb", "ccc"]) → ["a*", "bb*", "ccc*"]
+    //addStar(["hello", "there"]) → ["hello*", "there*"]
+    //addStar(["*"]) → ["**"]
+
+   public static List<String> addStar(List<String>strings){
+       List<String>addStar=new ArrayList();
+       for(String s:strings){
+           addStar.add(s + "*");
+       }
+       return addStar;
+   }
 }
