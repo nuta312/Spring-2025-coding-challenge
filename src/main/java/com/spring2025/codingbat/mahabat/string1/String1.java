@@ -254,4 +254,21 @@ public class String1 {
         return str.substring(0,str.length()-2) + newStr;
     }
 
+    /* Given a string, if the string begins with "red" or "blue" return that color string,
+    otherwise return the empty string.*/
+
+    public String seeColor(String str) {
+
+        String newStr = "";
+        if(str.startsWith("red")){
+            newStr = "red";
+        } else if (str.startsWith("blue")) {
+            newStr = "blue";
+        }else{
+            newStr = "";
+        }
+        return  newStr;
+    }
+
+
 }
