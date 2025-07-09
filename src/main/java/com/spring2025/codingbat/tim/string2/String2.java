@@ -71,5 +71,15 @@ public class String2 {
         }
         return false;
     }
-
+    public boolean xyBalance(String str) {
+        int ix = str.lastIndexOf("x");
+        int iy = str.lastIndexOf("y");
+        if(iy-ix >0){
+            return true;
+        }
+        if(iy-ix <0){
+            return false;
+        }
+        return true;
+    }
 }
