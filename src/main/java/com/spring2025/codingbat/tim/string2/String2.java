@@ -1,5 +1,8 @@
 package com.spring2025.codingbat.tim.string2;
-
+/**
+ * Author: Tim
+ * Date: 2025-07-09
+ */
 public class String2 {
     public static void main(String[] args) {
         String2 s = new String2();
