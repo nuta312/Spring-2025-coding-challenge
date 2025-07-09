@@ -16,4 +16,8 @@ public class Functional1 {
     public List<Integer> square(List<Integer> nums) {
         return nums.stream().map(n -> n * n).collect(Collectors.toList());
     }
+
+    public List<String> addStar(List<String> strings) {
+        return strings.stream().map(s -> s + "*").collect(Collectors.toList());
+    }
 }
