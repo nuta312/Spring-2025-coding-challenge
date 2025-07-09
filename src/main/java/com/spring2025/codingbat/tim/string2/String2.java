@@ -107,4 +107,16 @@ public class String2 {
         }
         return result;
     }
+    public String repeatFront(String str, int n) {
+
+        String result = "";
+        int temp = n;
+
+        for(int i = 0;i<=n;i++){
+            String let = str.substring(0,temp);
+            result+=let;
+            temp--;
+        }
+        return result;
+    }
 }
