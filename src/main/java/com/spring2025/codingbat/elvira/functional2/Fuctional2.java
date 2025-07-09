@@ -32,4 +32,16 @@ public class Fuctional2 {
     public List<String> no34(List<String> strings) {
         return strings.stream().filter(w -> w.length() != 3 && w.length() != 4).collect(Collectors.toList());
     }
+
+    public List<String> noYY(List<String> strings) {
+        return strings.stream().map(s -> s.concat("y")).filter(s -> !s.contains("yy")).collect(Collectors.toList());
+    }
+
+    public List<Integer> two2(List<Integer> nums) {
+        return nums.stream().map(n -> n *= 2).filter(n -> n %10 !=2 ).collect(Collectors.toList());
+    }
+
+    public List<Integer> square56(List<Integer> nums) {
+        return nums.stream().map(n -> n * n + 10 ).filter(n -> n % 10 != 5 && n %10 != 6).collect(Collectors.toList());
+    }
 }
