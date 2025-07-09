@@ -16,5 +16,16 @@ public class Logic1 {
         }
         return false;
     }
+    public int dateFashion(int you, int date) {
+        int result = 0;
+        if(you<=2 || date<=2){
+            return result = 0;
+        }
+        if(you >=8 || date >=8){
+            return result = 2;
+        }
+
+        return result = 1;
+    }
 
 }
