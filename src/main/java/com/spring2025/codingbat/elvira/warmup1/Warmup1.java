@@ -184,6 +184,8 @@ public class Warmup1 {
      * Given a string, we'll say that the front is the first 3 chars of the string.
      * If the string length is less than 3, the front is whatever is there.
      * Return a new string which is 3 copies of the front.
+     *
+     *
      * front3("Java") → "JavJavJav"
      * front3("Chocolate") → "ChoChoCho"
      * front3("abc") → "abcabcabc"
@@ -273,7 +275,8 @@ public class Warmup1 {
     }
 
     /**
-     * We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+     * We'll say that a number is "teen" if it is in the range 13..19 inclusive.
+     * Given 3 int values, return true if 1 or more of them are teen.
      *
      *
      * hasTeen(13, 20, 10) → true
@@ -289,7 +292,8 @@ public class Warmup1 {
     }
 
     /**
-     * We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+     * We'll say that a number is "teen" if it is in the range 13..19 inclusive.
+     * Given 2 int values, return true if one or the other is teen, but not both.
      *
      *
      * loneTeen(13, 99) → true
@@ -306,7 +310,8 @@ public class Warmup1 {
     }
 
     /**
-     * Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+     * Given a string, if the string "del" appears starting at index 1,
+     * return a string where that "del" has been deleted. Otherwise, return the string unchanged.
      *
      *
      * delDel("adelbc") → "abc"
@@ -322,7 +327,8 @@ public class Warmup1 {
     }
 
     /**
-     * Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+     * Return true if the given string begins with "mix",
+     * except the 'm' can be anything, so "pix", "9ix" .. all count.
      *
      *
      * mixStart("mix snacks") → true
@@ -339,9 +345,11 @@ public class Warmup1 {
     }
 
     /**
-     * Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+     * Given a string, return a string made of the first 2 chars (if present),
+     * however include first char only if it is 'o' and include the second only if it is 'z',
      *
      *
+     * so "ozymandias" yields "oz".
      * startOz("ozymandias") → "oz"
      * startOz("bzoo") → "z"
      * startOz("oxx") → "o"
@@ -360,6 +368,8 @@ public class Warmup1 {
 
     /**
      * Given three int values, a b c, return the largest.
+     *
+     *
      * intMax(1, 2, 3) → 3
      * intMax(1, 3, 2) → 3
      * intMax(3, 2, 1) → 3
@@ -376,6 +386,32 @@ public class Warmup1 {
         return c;
 
     }
+
+    /**
+     * Given 2 int values, return whichever value is nearest to the value 10,
+     * or return 0 in the event of a tie.
+     * Note that Math.abs(n) returns the absolute value of a number.
+     *
+     *
+     * close10(8, 13) → 8
+     * close10(13, 8) → 8
+     * close10(13, 7) → 0
+     */
+
+    public int close10(int a, int b) {
+        int nums = Math.abs(10 - a);
+        int nums1 = Math.abs(10 - b);
+
+        if(nums > nums1){
+            return b;
+        }
+        if(nums == nums1){
+            return 0;
+        }
+        return a;
+    }
+
+
 
 
 }
