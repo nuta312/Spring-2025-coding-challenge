@@ -80,4 +80,18 @@ public class Array1 {
         }
         return sum;
     }
+    /**
+     * Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
+     *
+     *
+     * rotateLeft3([1, 2, 3]) → [2, 3, 1]
+     * rotateLeft3([5, 11, 9]) → [11, 9, 5]
+     * rotateLeft3([7, 0, 0]) → [0, 0, 7]
+     */
+    public int[] rotateLeft3(int[] nums) {
+        int first = nums[0];
+        int middle = nums[nums.length / 2];
+        int last = nums[nums.length -1];
+        return new int[] {  middle, last,first };
+    }
 }
