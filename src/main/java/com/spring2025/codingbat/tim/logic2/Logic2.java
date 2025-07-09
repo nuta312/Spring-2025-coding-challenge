@@ -61,4 +61,34 @@ public class Logic2 {
         }
         return num;
     }
+    public boolean closeFar(int a, int b, int c) {
+        int diff1 = Math.abs(a-b);
+        int diff2 = Math.abs(a-c);
+        int diff3 = Math.abs(b-c);
+        int far = Math.max(diff1,diff2);
+        int close = Math.min(diff1,diff2);
+        if(close<2 && far>=2 && diff3>=2){
+            return true;
+        }
+        // if(diff1 >= 0 && diff1<2 && diff2>2){
+        //   return true;
+        // }
+        // if(diff2 >= 0 && diff2<2 && diff1>2){
+        //   return true;
+        // }
+        return false;
+    }
+    public int blackjack(int a, int b) {
+        int max = Math.max(a,b);
+        int min = Math.min(a,b);
+        if(a >21 && b > 21){
+            return 0;
+        }
+        if(max<=21){
+            return max;
+        }
+
+        return min;
+
+    }
 }
