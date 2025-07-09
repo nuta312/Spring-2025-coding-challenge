@@ -127,4 +127,25 @@ public class Logic2 {
         }
     }
 
+    /*
+    We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each).
+    Return the number of small bars to use, assuming we always use big bars before small bars. Return -1 if it can't be done.
+     */
+
+    public int makeChocolate(int small, int big, int goal) {
+        int result = goal - (big * 5);
+        int result2 = goal - 5 ;
+
+        if(result >= 0  && result <= small){
+            return result;
+        } else if (result2 > 0 && result2 <= small) {
+            return result2;
+        } else if (goal == 5 || big * 2 == goal) {
+            return 0;
+        } else if(goal == small) {
+            return small;
+        }
+        return  -1;
+    }
+
 }
