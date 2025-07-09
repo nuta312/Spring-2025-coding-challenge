@@ -140,5 +140,13 @@ public class String2 {
         return false;
 
     }
-
+    public boolean xyzMiddle(String str) {
+        int half = str.length()/2;
+        int index = str.indexOf("xyz");
+        if(index == half || index == half -1 || index == half +1 || index == half -2
+                || index == half +2){
+            return true;
+        }
+        return false;
+    }
 }
