@@ -71,4 +71,21 @@ public class Functional1 {
        }
        return square;
    }
+
+   //Given a list of strings, return a list where each string has "y" added at its start and end.
+   //
+   //
+   //moreY(["a", "b", "c"]) → ["yay", "yby", "ycy"]
+   //moreY(["hello", "there"]) → ["yhelloy", "ytherey"]
+   //moreY(["yay"]) → ["yyayy"]
+
+   public static List<String> moreY(List<String>strings){
+       List<String> result=new ArrayList<>();
+       String element="y";
+       for(String s:strings){
+           result.add("y" + s + "y");
+
+       }
+       return result;
+   }
 }
