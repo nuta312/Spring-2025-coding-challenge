@@ -12,4 +12,8 @@ public class Functional1 {
     public List<Integer> doubling(List<Integer> nums) {
         return nums.stream().map(n -> n * 2).collect(Collectors.toList());
     }
+
+    public List<Integer> square(List<Integer> nums) {
+        return nums.stream().map(n -> n * n).collect(Collectors.toList());
+    }
 }
