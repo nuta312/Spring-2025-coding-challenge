@@ -343,4 +343,52 @@ hasBad("xxbadxx") → false
         }
         return a + b;
     }
+    /*
+    Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign".
+
+    lastTwo("coding") → "codign"
+    lastTwo("cat") → "cta"
+    lastTwo("ab") → "ba"
+     */
+    public String lastTwo(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+
+        String start = str.substring(0, str.length() - 2); // всё кроме последних 2 символов
+        char secondLast = str.charAt(str.length() - 2);
+        char last = str.charAt(str.length() - 1);
+
+        return start + last + secondLast;
+    }
+    /*
+    Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
+
+    seeColor("redxx") → "red"
+    seeColor("xxred") → ""
+    seeColor("blueTimes") → "blue"
+     */
+    public String seeColor(String str) {
+        if (str.startsWith("red")){
+            return "red";
+        } else if (str.startsWith("blue")){
+            return "blue";
+        }
+        return "";
+    }
+    /*
+    Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
+
+    frontAgain("edited") → true
+    frontAgain("edit") → false
+    frontAgain("ed") → true
+     */
+    public boolean frontAgain(String str) {
+        if (str.length() < 2) {
+            return false;
+        }
+        String front = str.substring(0, 2);
+        String end = str.substring(str.length() - 2);
+        return front.equals(end);
+    }
 }
