@@ -129,4 +129,14 @@ public class String1 {
         int mid = str.length() / 2;
         return str.substring(mid - 1, mid + 1);
     }
+
+    // Given a string, return true if it ends in "ly".
+
+    public boolean endsLy(String str) {
+        if (str.endsWith("ly")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
