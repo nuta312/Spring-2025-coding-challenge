@@ -2,9 +2,14 @@ package com.spring2025.codingbat.eldiyar.warmup1;
 
 public class Warmup1 {
     public static void main(String[] args) {
+        /**
+         * В этом классе все решения задач из CodingBat: Warmup-1
+         *
+         * @author Eldiyar
+         * @since 2025-10-07
+         */
 
     }
-
 
     public boolean sleepIn(boolean weekday, boolean vacation) {
         return !weekday || vacation;
