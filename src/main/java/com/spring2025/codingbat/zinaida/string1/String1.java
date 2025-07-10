@@ -186,4 +186,27 @@ left2("Hi") → "Hi"
         return str;
     }
 
+ /*
+ Given a string, return a "rotated right 2" version where the last 2 chars are moved
+ to the start. The string length will be at least 2.
+
+right2("Hello") → "loHel"
+right2("java") → "vaja"
+right2("Hi") → "Hi"
+
+  */
+
+    public String right2(String str) {
+
+        String result = "";
+        String half1 = "";
+        String half2 = "";
+
+        if (str.length() >= 2) {
+            half1 = str.substring(str.length() - 2);
+            half2 = str.substring(0, str.length() - 2);
+            result = half1 + half2;
+        }
+        return result;
+    }
 }
