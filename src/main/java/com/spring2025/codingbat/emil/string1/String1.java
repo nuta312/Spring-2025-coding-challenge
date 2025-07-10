@@ -426,4 +426,43 @@ hasBad("xxbadxx") → false
             return str+str+str;
         }
     }
+    /*
+    Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe". The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
+
+    without2("HelloHe") → "lloHe"
+    without2("HelloHi") → "HelloHi"
+    without2("Hi") → ""
+     */
+    public String without2(String str) {
+
+        if (str.length() >= 2){
+            String lastTwo = str.substring(str.length() -2);
+            String firstTwo = str.substring(0, 2);
+            if (lastTwo.equals(firstTwo)){
+                return str.substring(2);
+            }
+        }
+        return str;
+    }
+    /*
+    Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+
+    deFront("Hello") → "llo"
+    deFront("java") → "va"
+    deFront("away") → "aay"
+     */
+    public String deFront(String str) {
+        String result = "";
+
+        if (str.length() >= 1 && str.charAt(0) == 'a') {
+            result += "a";
+        }
+        if (str.length() >= 2 && str.charAt(1) == 'b') {
+            result += "b";
+        }
+        if (str.length() > 2) {
+            result += str.substring(2);
+        }
+        return result;
+    }
 }
