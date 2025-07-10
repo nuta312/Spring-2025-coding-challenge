@@ -3,6 +3,9 @@ package com.spring2025.codingbat.madina.string1;
 public class String1 {
     public static void main(String[] args) {
     }
+    /*
+    @author Madina
+     */
 
   /**  Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
     helloName("Bob") → "Hello Bob!"
