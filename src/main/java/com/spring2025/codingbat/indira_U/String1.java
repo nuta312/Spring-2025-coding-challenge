@@ -56,4 +56,16 @@ public String makeOutWord(String out, String word) {
     return out.substring(0, 2) + word + out.substring(2);
 }
 
+    /*Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
+
+
+    extraEnd("Hello") → "lololo"
+    extraEnd("ab") → "ababab"
+    extraEnd("Hi") → "HiHiH*/
+    public String extraEnd(String str) {
+        return str.substring(str.length()-2)
+                +str.substring(str.length()-2)
+                +str.substring(str.length()-2);
+    }
+
 }
