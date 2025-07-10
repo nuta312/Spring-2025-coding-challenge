@@ -156,18 +156,20 @@ public class Warmup1 {
             String last = str.substring(str.length() - 1);
             return last + str + last;
         }
+
         /// Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
         /// or35(3) → true
         /// or35(10) → true
         /// or35(8) → false
         /// Warmup-1 > or35
         public boolean or35(int n) {
-            if (n % 3 == 0 || n % 5 == 0){
+            if (n % 3 == 0 || n % 5 == 0) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
+
         /// Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki".
         /// If the string length is less than 2, use whatever chars are there.
         /// front22("kitten") → "kikittenki"
@@ -175,10 +177,11 @@ public class Warmup1 {
         /// front22("abc") → "ababcab"
         /// Warmup-1 > front22
         public String front22(String str) {
-            if(str.length() < 2) return str+ str+str;
-            String first = str.substring(0,2);
+            if (str.length() < 2) return str + str + str;
+            String first = str.substring(0, 2);
             return first + str + first;
         }
+
         /// Given a string, return true if the string starts with "hi" and false otherwise.
         /// startHi("hi there") → true
         /// startHi("hi") → true
@@ -186,36 +189,39 @@ public class Warmup1 {
         /// Warmup-1 > startHi
         public boolean startHi(String str) {
             if (str.length() < 2) return false;
-            if (str.substring(0,2).contains("hi")){
+            if (str.substring(0, 2).contains("hi")) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
+
         /// Given two temperatures, return true if one is less than 0 and the other is greater than 100.
         /// icyHot(120, -1) → true
         /// icyHot(-1, 120) → true
         /// icyHot(2, 120) → false
         /// Warmup-1 > icyHot
         public boolean icyHot(int temp1, int temp2) {
-            if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)){
+            if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
+
         /// Given 2 int values, return true if either of them is in the range 10..20 inclusive.
         /// in1020(12, 99) → true
         /// in1020(21, 12) → true
         /// in1020(8, 99) → false
         /// Warmup-1 > in1020
         public boolean in1020(int a, int b) {
-            if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)){
+            if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
+
         /// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
         /// hasTeen(13, 20, 10) → true
         /// hasTeen(20, 19, 10) → true
@@ -228,5 +234,15 @@ public class Warmup1 {
                     (c >= 13 && c <= 19);
         }
 
+        /// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+        /// loneTeen(13, 99) → true
+        /// loneTeen(21, 19) → true
+        /// loneTeen(13, 13) → false
+        /// Warmup-1 > loneTeen
+        public boolean loneTeen(int a, int b) {
+            boolean aTeen = (a >= 13 && a <= 19);
+            boolean bTeen = (b >= 13 && b <= 19);
 
+            return (aTeen && !bTeen) || (!aTeen && bTeen);
+        }
     }
