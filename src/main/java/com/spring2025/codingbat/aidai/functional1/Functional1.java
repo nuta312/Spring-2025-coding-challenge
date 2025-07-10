@@ -29,4 +29,15 @@ public class Functional1 {
     public List<Integer> square(List<Integer> nums) {
         return nums.stream().map(n -> n*n).collect(Collectors.toList());
     }
+    /**
+     * Given a list of strings, return a list where each string has "*" added at its end.
+     *
+     *
+     * addStar(["a", "bb", "ccc"]) → ["a*", "bb*", "ccc*"]
+     * addStar(["hello", "there"]) → ["hello*", "there*"]
+     * addStar(["*"]) → ["**"]
+     */
+    public List<String> addStar(List<String> strings) {
+        return strings.stream().map(s -> s.concat("*")).collect(Collectors.toList());
+    }
 }
