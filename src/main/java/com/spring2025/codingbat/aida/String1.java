@@ -96,4 +96,11 @@ public class String1 {
     public String left2(String str) {
         return str.substring(2) + str.substring (0, 2);
     }
+
+    // Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. The string length will be at least 2.
+
+    public String right2(String str) {
+        int len = str.length();
+        return str.substring(len - 2) + str.substring(0, len - 2);
+    }
 }
