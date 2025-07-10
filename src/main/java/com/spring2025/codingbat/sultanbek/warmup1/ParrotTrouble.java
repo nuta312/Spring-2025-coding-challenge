@@ -1,4 +1,4 @@
-package com.spring2025.codingbat.sultan.warmup1;
+package com.spring2025.codingbat.sultanbek.warmup1;
 
 public class ParrotTrouble {
     /**
