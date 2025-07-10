@@ -204,9 +204,29 @@ public class Warmup1 {
                 return false;
             }
         }
+        /// Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+        /// in1020(12, 99) → true
+        /// in1020(21, 12) → true
+        /// in1020(8, 99) → false
+        /// Warmup-1 > in1020
+        public boolean in1020(int a, int b) {
+            if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        /// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+        /// hasTeen(13, 20, 10) → true
+        /// hasTeen(20, 19, 10) → true
+        /// hasTeen(20, 10, 13) → true
+        /// Warmup-1 > hasTeen
 
-
-
+        public boolean hasTeen(int a, int b, int c) {
+            return (a >= 13 && a <= 19) ||
+                    (b >= 13 && b <= 19) ||
+                    (c >= 13 && c <= 19);
+        }
 
 
     }
