@@ -3,7 +3,7 @@ package com.spring2025.codingbat.eldiyar.warmup2;
 public class Warmup2 {
     public static void main(String[] args) {
         /**
-         * В этом классе все решения задач из CodingBat: Warmup-1
+         * В этом классе все решения задач из CodingBat: Warmup-2
          * @author Eldiyar
          */
     }
