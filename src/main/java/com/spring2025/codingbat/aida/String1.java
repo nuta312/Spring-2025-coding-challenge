@@ -341,5 +341,25 @@ public class String1 {
         return str;
     }
 
+    // Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged. This is a little harder than it looks.
+
+    public String withoutX2(String str) {
+        String result = "";
+
+        if (str.length() >= 1 && str.charAt(0) != 'x') {
+            result += str.charAt(0);
+        }
+
+        if (str.length() >= 2 && str.charAt(1) != 'x') {
+            result += str.charAt(1);
+        }
+
+        if (str.length() > 2) {
+            result += str.substring(2);
+        }
+
+        return result;
+    }
+
 
 }
