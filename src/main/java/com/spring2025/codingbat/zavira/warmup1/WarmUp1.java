@@ -107,4 +107,24 @@ makes10(1, 9) → true
         }
         return false;
     }
+
+    /* Given an int n, return true if it is within 10 of 100 or 200.
+    Note: Math.abs(num) computes the absolute value of a number.
+
+nearHundred(93) → true
+nearHundred(90) → true
+nearHundred(89) → false
+
+     */
+
+    public boolean nearHundred(int n) {
+
+        int sto = Math.abs (n - 100);
+        int dvesti = Math.abs (n - 200);
+
+        if (sto <= 10 || dvesti <= 10) {
+            return true;
+        }
+        return false;
+    }
 }
