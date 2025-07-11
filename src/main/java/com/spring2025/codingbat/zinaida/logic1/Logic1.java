@@ -406,7 +406,7 @@ inOrderEqual(5, 5, 7, true) → true
         if (a < b && b < c) result = true;
         else result = false;
 
-        if (equalOk){
+        if (equalOk) {
             if (a == b && a < c || a == b && b == c) result = true;
             if (a < b && b == c) result = true;
             if (a < b && b < c) result = true;
@@ -425,7 +425,7 @@ lastDigit(23, 19, 3) → true
      */
     public boolean lastDigit(int a, int b, int c) {
 
-        return  (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10);
+        return (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10);
 
     }
 
@@ -448,5 +448,28 @@ lessBy10(11, 1, 7) → true
         return (res1 >= 10 || res2 >= 10 || res3 >= 10 || res4 >= 10 || res5 >= 10 || res6 >= 10);
     }
 
+    /*
+Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is true, if the two
+dice show the same value, increment one die to the next value, wrapping around to 1 if its value was 6.
+
+withoutDoubles(2, 3, true) → 5
+withoutDoubles(3, 3, true) → 7
+withoutDoubles(3, 3, false) → 6
+     */
+    public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+
+        int result = 0;
+        if (noDoubles) {
+            if (die1 == die2) {
+                if (die1 == 6) {
+                    die1 = 1;
+                } else {
+                    die1++;
+                }
+            }
+        }
+        result = die1 + die2;
+        return result;
+    }
 
 }
