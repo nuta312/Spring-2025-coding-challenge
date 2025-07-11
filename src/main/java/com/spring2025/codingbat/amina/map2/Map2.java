@@ -173,4 +173,37 @@ public class Map2 {
 
         return result.toString();
     }
+
+    /**
+     Task 9 – firstSwap
+
+     Like allSwap, but once a character is used for swapping, it can’t swap again.
+
+     firstSwap(["ab", "ac"]) → ["ac", "ab"]
+     firstSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → ["ay", "by", "cy", "cx", "bx", "ax", "aaa", "azz"]
+     firstSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax", "bx", "ai", "aj", "bx", "by"]
+     */
+    public String[] firstSwap(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        Set<String> used = new HashSet<>();
+
+        for (int i = 0; i < strings.length; i++) {
+            String key = strings[i].substring(0, 1);
+
+            if (used.contains(key)) continue;
+
+            if (map.containsKey(key)) {
+                int prevIndex = map.get(key);
+                String temp = strings[i];
+                strings[i] = strings[prevIndex];
+                strings[prevIndex] = temp;
+                used.add(key);
+                map.remove(key);
+            } else {
+                map.put(key, i);
+            }
+        }
+
+        return strings;
+    }
 }
