@@ -441,4 +441,22 @@ public class Logic1 {
         if (isMorning && !isMom) return false;
         return true;
     }
+
+    /**
+     Task 26 - fizzString2
+
+     Return "Fizz" if divisible by 3, "Buzz" if by 5, "FizzBuzz" if both.
+     Otherwise, return number + "!".
+
+     fizzString2(1) → "1!"
+     fizzString2(2) → "2!"
+     fizzString2(3) → "Fizz!"
+     */
+
+    public String fizzString2(int n) {
+        if (n % 15 == 0) return "FizzBuzz!";
+        if (n % 3 == 0) return "Fizz!";
+        if (n % 5 == 0) return "Buzz!";
+        return n + "!";
+    }
 }
