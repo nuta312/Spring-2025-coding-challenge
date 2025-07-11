@@ -84,7 +84,7 @@ public class Map2 {
     }
 
     /**
-     Task 4 – firstChar
+     Task 5 – firstChar
 
      Return a Map where each key is the first char of strings in the array,
      and the value is all those strings concatenated in order.
@@ -103,7 +103,7 @@ public class Map2 {
     }
 
     /**
-     Task 5 – allSwap
+     Task 6 – allSwap
 
      Swap strings if their first characters match.
      Each character can only be used once for swapping.
