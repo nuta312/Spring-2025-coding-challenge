@@ -429,9 +429,29 @@ lastTwo("ab") → "ba"
 
     public String lastTwo(String str) {
 
-        return (str.length() >= 2) ? str.substring(0, str.length()-2) +
-                (str.substring(str.length()-1) + (str.substring(str.length()-2, str.length()-1))) : str;
+        return (str.length() >= 2) ? str.substring(0, str.length() - 2) +
+                (str.substring(str.length() - 1) + (str.substring(str.length() - 2, str.length() - 1))) : str;
 
+    }
+
+ /*
+  Given a string, if the string begins with "red" or "blue" return that color string,
+  otherwise return the empty string.
+
+seeColor("redxx") → "red"
+seeColor("xxred") → ""
+seeColor("blueTimes") → "blue"
+  */
+
+    public String seeColor(String str) {
+
+        if (str.length() >= 3 && str.substring(0, 3).equalsIgnoreCase("red")) {
+            return "red";
+        } else if (str.length() >= 4 && str.substring(0, 4).equalsIgnoreCase("blue")) {
+            return "blue";
+        } else {
+            return "";
+        }
     }
 
 }
