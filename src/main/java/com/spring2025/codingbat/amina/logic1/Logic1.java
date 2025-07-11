@@ -202,4 +202,21 @@ public class Logic1 {
         if (you >= 8 || date >= 8) return 2;
         return 1;
     }
+
+    /**
+     Task 12 — sortaSum
+
+     Given 2 ints, a and b, return their sum. However, if the sum is in the range 10..19 inclusive,
+     return 20 instead.
+
+     Examples:
+     sortaSum(3, 4) → 7
+     sortaSum(9, 4) → 20
+     sortaSum(10, 11) → 21
+     */
+    public int sortaSum(int a, int b) {
+        int sum = a + b;
+        if (sum >= 10 && sum <= 19) return 20;
+        return sum;
+    }
 }
