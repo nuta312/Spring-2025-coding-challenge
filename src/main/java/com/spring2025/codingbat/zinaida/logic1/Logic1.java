@@ -429,4 +429,24 @@ lastDigit(23, 19, 3) → true
 
     }
 
+    /*
+ Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+
+lessBy10(1, 7, 11) → true
+lessBy10(1, 7, 10) → false
+lessBy10(11, 1, 7) → true
+     */
+    public boolean lessBy10(int a, int b, int c) {
+
+        int res1 = a - b;
+        int res2 = a - c;
+        int res3 = c - a;
+        int res4 = c - b;
+        int res5 = b - a;
+        int res6 = b - c;
+
+        return (res1 >= 10 || res2 >= 10 || res3 >= 10 || res4 >= 10 || res5 >= 10 || res6 >= 10);
+    }
+
+
 }
