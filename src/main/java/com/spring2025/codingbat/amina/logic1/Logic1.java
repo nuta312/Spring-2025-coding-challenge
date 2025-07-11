@@ -422,4 +422,23 @@ public class Logic1 {
     public boolean less20(int n) {
         return n % 20 == 18 || n % 20 == 19;
     }
+
+    /**
+     Task 25 - answerCell
+
+     Return true if you should answer your cell phone.
+     Don't answer if asleep.
+     If mom calls, answer unless asleep.
+     If not morning, you can answer.
+
+     answerCell(false, false, false) → true
+     answerCell(false, true, false) → true
+     answerCell(true, false, false) → false
+     */
+
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if (isAsleep) return false;
+        if (isMorning && !isMom) return false;
+        return true;
+    }
 }
