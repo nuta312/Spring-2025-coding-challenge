@@ -344,4 +344,20 @@ public class Logic1 {
         return 0;
     }
 
+    /**
+     Task 20 - shareDigit
+
+     Given two ints in the range 10..99, return true if they share a digit.
+
+     shareDigit(12, 23) → true
+     shareDigit(12, 43) → false
+     shareDigit(12, 44) → false
+     */
+
+    public boolean shareDigit(int a, int b) {
+        int a1 = a / 10, a2 = a % 10;
+        int b1 = b / 10, b2 = b % 10;
+        return a1 == b1 || a1 == b2 || a2 == b1 || a2 == b2;
+    }
+
 }
