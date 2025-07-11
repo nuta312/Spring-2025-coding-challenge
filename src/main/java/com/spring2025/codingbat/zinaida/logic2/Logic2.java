@@ -155,4 +155,31 @@ evenlySpaced(4, 6, 3) → false
         return (nums[1] - nums[0] == nums[2] - nums[1]);
 
     }
+
+    /*
+We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each).
+Return the number of small bars to use, assuming we always use big bars before small bars. Return -1 if it can't be done.
+
+makeChocolate(4, 1, 9) → 4
+makeChocolate(4, 1, 10) → -1
+makeChocolate(4, 1, 7) → 2
+     */
+    public int makeChocolate(int small, int big, int goal) {
+        // 1. Вычисляем, сколько больших плиток МАКСИМУМ можно использовать
+        int maxBigBarsWeCanUse = goal / 5;
+
+        // 2. Выбираем меньшее: сколько можем использовать И сколько у нас есть
+        int bigBarsToUse = Math.min(maxBigBarsWeCanUse, big);
+
+        // 3. Вычитаем вес от больших плиток, чтобы узнать, сколько осталось
+        int remainingWeight = goal - (bigBarsToUse * 5);
+
+        // 4. Проверяем: хватает ли маленьких плиток на оставшийся вес
+        if (remainingWeight <= small) {
+            return remainingWeight; // нужно столько маленьких плиток
+        } else {
+            return -1; // не хватает маленьких плиток — цель не достижима
+        }
+    }
+
 }
