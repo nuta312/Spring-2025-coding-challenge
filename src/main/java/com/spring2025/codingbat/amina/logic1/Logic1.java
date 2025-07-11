@@ -360,4 +360,20 @@ public class Logic1 {
         return a1 == b1 || a1 == b2 || a2 == b1 || a2 == b2;
     }
 
+    /**
+     Task 21 - squirrelPlay
+
+     The squirrels play if temp is between 60 and 90 inclusive.
+     Unless it's summer → upper limit is 100.
+
+     squirrelPlay(70, false) → true
+     squirrelPlay(95, false) → false
+     squirrelPlay(95, true) → true
+     */
+
+    public boolean squirrelPlay(int temp, boolean isSummer) {
+        int upper = isSummer ? 100 : 90;
+        return temp >= 60 && temp <= upper;
+    }
+
 }
