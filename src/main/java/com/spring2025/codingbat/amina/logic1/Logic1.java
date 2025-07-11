@@ -323,4 +323,25 @@ public class Logic1 {
         return Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(a - c) >= 10;
     }
 
+    /**
+     Task 19 - redTicket
+
+     You have a red lottery ticket with integers a, b, and c.
+     If all are 2 → return 10
+     If all are same → return 5
+     If a ≠ b and c → return 1
+     Else → return 0
+
+     redTicket(2, 2, 2) → 10
+     redTicket(2, 2, 1) → 0
+     redTicket(0, 0, 0) → 5
+     */
+
+    public int redTicket(int a, int b, int c) {
+        if (a == 2 && b == 2 && c == 2) return 10;
+        if (a == b && b == c) return 5;
+        if (a != b && a != c) return 1;
+        return 0;
+    }
+
 }
