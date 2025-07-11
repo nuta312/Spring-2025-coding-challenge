@@ -59,4 +59,19 @@ public class Logic1 {
     public boolean love6(int a, int b) {
         return (a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6);
     }
+
+    /**
+     Task 4 — more20
+
+     Return true if the given non-negative number is 1 or 2 more than a multiple of 20.
+
+     Examples:
+     more20(20) → false
+     more20(21) → true
+     more20(22) → true
+     */
+    public boolean more20(int n) {
+        return n % 20 == 1 || n % 20 == 2;
+    }
+
 }
