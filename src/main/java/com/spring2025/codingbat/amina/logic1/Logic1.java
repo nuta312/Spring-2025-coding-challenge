@@ -250,4 +250,20 @@ public class Logic1 {
     public boolean old35(int n) {
         return (n % 3 == 0) ^ (n % 5 == 0); // XOR
     }
+
+    /**
+     Task 15 — teenSum
+
+     Given 2 ints, a and b, return their sum. However, if either value is a "teen" — in the range 13..19 inclusive —
+     then return 19.
+
+     Examples:
+     teenSum(3, 4) → 7
+     teenSum(10, 13) → 19
+     teenSum(13, 2) → 19
+     */
+    public int teenSum(int a, int b) {
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) return 19;
+        return a + b;
+    }
 }
