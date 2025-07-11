@@ -394,4 +394,18 @@ public class Logic1 {
         }
         return isWeekend ? "10:00" : "7:00";
     }
+
+    /**
+     Task 23 - specialEleven
+
+     Return true if n is a multiple of 11 or one more than a multiple of 11.
+
+     specialEleven(22) → true
+     specialEleven(23) → true
+     specialEleven(24) → false
+     */
+
+    public boolean specialEleven(int n) {
+        return n % 11 == 0 || n % 11 == 1;
+    }
 }
