@@ -514,5 +514,18 @@ public class Logic1 {
         return 0;
     }
 
+    /**
+     Task 30 - sumLimit
 
+     Return sum of a and b, unless sum has more digits than a — return a instead.
+
+     sumLimit(2, 3) → 5
+     sumLimit(8, 3) → 8
+     sumLimit(8, 1) → 9
+     */
+
+    public int sumLimit(int a, int b) {
+        int sum = a + b;
+        return String.valueOf(sum).length() > String.valueOf(a).length() ? a : sum;
+    }
 }
