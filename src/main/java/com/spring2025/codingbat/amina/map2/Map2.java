@@ -101,4 +101,33 @@ public class Map2 {
         }
         return map;
     }
+
+    /**
+     Task 5 – allSwap
+
+     Swap strings if their first characters match.
+     Each character can only be used once for swapping.
+
+     allSwap(["ab", "ac"]) → ["ac", "ab"]
+     allSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → ["ay", "by", "cy", "cx", "bx", "ax", "azz", "aaa"]
+     allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax", "bx", "aj", "ai", "by", "bx"]
+     */
+    public String[] allSwap(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < strings.length; i++) {
+            String key = strings[i].substring(0, 1);
+            if (map.containsKey(key)) {
+                int prevIndex = map.get(key);
+                String temp = strings[i];
+                strings[i] = strings[prevIndex];
+                strings[prevIndex] = temp;
+                map.remove(key);
+            } else {
+                map.put(key, i);
+            }
+        }
+
+        return strings;
+    }
 }
