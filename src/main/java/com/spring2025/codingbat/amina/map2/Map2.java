@@ -82,4 +82,23 @@ public class Map2 {
         }
         return map;
     }
+
+    /**
+     Task 4 – firstChar
+
+     Return a Map where each key is the first char of strings in the array,
+     and the value is all those strings concatenated in order.
+
+     firstChar(["salt", "tea", "soda", "toast"]) → {"s": "saltsoda", "t": "teatoast"}
+     firstChar(["aa", "bb", "cc", "aAA", "cCC", "d"]) → {"a": "aaaAA", "b": "bb", "c": "cccCC", "d": "d"}
+     firstChar([]) → {}
+     */
+    public Map<String, String> firstChar(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+        for (String str : strings) {
+            String key = str.substring(0, 1);
+            map.put(key, map.getOrDefault(key, "") + str);
+        }
+        return map;
+    }
 }
