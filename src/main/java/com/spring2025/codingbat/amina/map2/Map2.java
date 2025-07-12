@@ -44,4 +44,26 @@ public class Map2 {
         return map;
     }
 
+    /**
+     Task 3 – wordMultiple
+
+     Return a Map with each string and a boolean value:
+     true if it appears 2 or more times, false otherwise.
+
+     wordMultiple(["a", "b", "a", "c", "b"]) → {"a": true, "b": true, "c": false}
+     wordMultiple(["c", "b", "a"]) → {"a": false, "b": false, "c": false}
+     wordMultiple(["c", "c", "c", "c"]) → {"c": true}
+     */
+    public Map<String, Boolean> wordMultiple(String[] strings) {
+        Map<String, Boolean> map = new HashMap<>();
+        for (String str : strings) {
+            if (!map.containsKey(str)) {
+                map.put(str, false);
+            } else {
+                map.put(str, true);
+            }
+        }
+        return map;
+    }
+
 }
