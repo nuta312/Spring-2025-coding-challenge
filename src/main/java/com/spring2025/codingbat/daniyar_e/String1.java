@@ -127,10 +127,10 @@ public class String1 {
      */
 
     public String comboString(String a, String b) {
-        if(a.length() > b.length()){
-            return b+a+b;
-        }else{
-            return a+b+a;
+        if (a.length() > b.length()) {
+            return b + a + b;
+        } else {
+            return a + b + a;
         }
     }
 
@@ -144,9 +144,9 @@ public class String1 {
      */
 
     public String nonStart(String a, String b) {
-        String q = a.substring(1,a.length());
-        String w = b.substring(1,b.length());
-        return q+w;
+        String q = a.substring(1, a.length());
+        String w = b.substring(1, b.length());
+        return q + w;
     }
 
     /*
@@ -159,12 +159,13 @@ public class String1 {
      */
 
     public String left2(String str) {
-        String left2 = str.substring(0,2);
-        String right = str.substring(2,str.length());
-        if(str.length()>2){
+        String left2 = str.substring(0, 2);
+        String right = str.substring(2, str.length());
+        if (str.length() > 2) {
             return right + left2;
 
-        }return str;
+        }
+        return str;
     }
 
     /*
@@ -177,10 +178,11 @@ public class String1 {
      */
 
     public String right2(String str) {
-        String right2 = str.substring(str.length()-2);
-        if(str.length()>2){
-            return right2 + str.substring(0,str.length()-2);
-        }return str;
+        String right2 = str.substring(str.length() - 2);
+        if (str.length() > 2) {
+            return right2 + str.substring(0, str.length() - 2);
+        }
+        return str;
     }
 
     /*
@@ -193,10 +195,10 @@ public class String1 {
      */
 
     public String theEnd(String str, boolean front) {
-        if(front){
-            return str.substring(0,1);
-        }else {
-            return str.substring(str.length()-1);
+        if (front) {
+            return str.substring(0, 1);
+        } else {
+            return str.substring(str.length() - 1);
         }
     }
 
@@ -210,11 +212,12 @@ public class String1 {
      */
 
     public String withouEnd2(String str) {
-        if(str.length()<=2){
+        if (str.length() <= 2) {
             return "";
-        }else if(str.length()>2){
-            return str.substring(1,str.length()-1);
-        }return str;
+        } else if (str.length() > 2) {
+            return str.substring(1, str.length() - 1);
+        }
+        return str;
     }
 
     /*
@@ -227,8 +230,8 @@ public class String1 {
      */
 
     public String middleTwo(String str) {
-        int half = str.length()/2;
-        return str.substring(half-1,half+1);
+        int half = str.length() / 2;
+        return str.substring(half - 1, half + 1);
     }
 
     /*
@@ -254,6 +257,44 @@ public class String1 {
      */
 
     public String nTwice(String str, int n) {
-        return str.substring(0,n)+str.substring(str.length()-n);
+        return str.substring(0, n) + str.substring(str.length() - n);
     }
+
+    /*
+    Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+
+
+    twoChar("java", 0) → "ja"
+    twoChar("java", 2) → "va"
+    twoChar("java", 3) → "ja"
+     */
+
+    public String twoChar(String str, int index) {
+        if (index < 0) {
+            return str.substring(0, 2);
+        } else if (str.length() <= index) {
+            return str.substring(0, 2);
+        } else if (str.length() - 1 == index) {
+            return str.substring(0, 2);
+        } else if (str.length() > index) {
+            return str.substring(index, index + 2);
+        }
+        return str;
+    }
+
+    /*
+    Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". The string length will be at least 3.
+
+
+    middleThree("Candy") → "and"
+    middleThree("and") → "and"
+    middleThree("solving") → "lvi"
+     */
+
+    public String middleThree(String str) {
+        int half = str.length()/2;
+        return str.substring(half-1, half+2
+        );
+    }
+
 }
