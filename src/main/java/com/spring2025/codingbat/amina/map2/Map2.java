@@ -134,4 +134,22 @@ public class Map2 {
         return strings;
     }
 
+    /**
+     Task 7 – pairs
+
+     Return a Map where each key is the first letter of a string,
+     and the value is the last letter of that string.
+     If a key appears more than once, overwrite.
+
+     pairs(["code", "bug"]) → {"b": "g", "c": "e"}
+     pairs(["man", "moon", "main"]) → {"m": "n"}
+     pairs(["man", "moon", "good", "night"]) → {"g": "d", "m": "n", "n": "t"}
+     */
+    public Map<String, String> pairs(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+        for (String str : strings) {
+            map.put(str.substring(0, 1), str.substring(str.length() - 1));
+        }
+        return map;
+    }
 }
