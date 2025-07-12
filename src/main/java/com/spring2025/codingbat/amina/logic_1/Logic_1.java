@@ -78,5 +78,20 @@ public class Logic_1 {
         return n % 20 == 1 || n % 20 == 2;
     }
 
+    /**
+     Task 5 — nearTen
+
+     Given a non-negative number "num", return true if num is within 2 of a multiple of 10.
+
+     Examples:
+     nearTen(12) → true
+     nearTen(17) → false
+     nearTen(19) → true
+     */
+    public boolean nearTen(int num) {
+        int mod = num % 10;
+        return mod <= 2 || mod >= 8;
+    }
+
 
 }
