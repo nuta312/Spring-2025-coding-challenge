@@ -413,6 +413,20 @@ public class Logic_1 {
         return n % 11 == 0 || n % 11 == 1;
     }
 
+    /**
+     Task 24 - less20
+
+     Return true if n is 1 or 2 less than a multiple of 20.
+
+     less20(18) → true
+     less20(19) → true
+     less20(20) → false
+     */
+
+    public boolean less20(int n) {
+        return n % 20 == 18 || n % 20 == 19;
+    }
+
 
 
 
