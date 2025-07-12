@@ -349,8 +349,8 @@ public class Warmup1 {
      */
 
     public String delDel(String str) {
-        if(str.length()>=4 && str.substring(1,4).equals("del")){
-            return str.substring(0,1) + str.substring(4);
+        if (str.length() >= 4 && str.substring(1, 4).equals("del")) {
+            return str.substring(0, 1) + str.substring(4);
         }
 
         return str;
@@ -366,7 +366,7 @@ public class Warmup1 {
      */
 
     public boolean mixStart(String str) {
-        if(str.contains("ix")){
+        if (str.contains("ix")) {
             return true;
         }
         return false;
@@ -384,16 +384,35 @@ public class Warmup1 {
     public String startOz(String str) {
         String result = "";
 
-        if(str.length() >=1 && str.charAt(0)=='o'){
+        if (str.length() >= 1 && str.charAt(0) == 'o') {
             result = result + str.charAt(0);
         }
-        if(str.length() >=2 && str.charAt(1)=='z'){
+        if (str.length() >= 2 && str.charAt(1) == 'z') {
             result = result + str.charAt(1);
         }
         return result;
     }
 
+    /*
+    Given three int values, a b c, return the largest.
 
 
+    intMax(1, 2, 3) → 3
+    intMax(1, 3, 2) → 3
+    intMax(3, 2, 1) → 3
+     */
+
+    public int intMax(int a, int b, int c) {
+        int max;
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+        }
+        return max;
+    }
 
 }
