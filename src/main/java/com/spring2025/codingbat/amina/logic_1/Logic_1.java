@@ -271,6 +271,30 @@ public class Logic_1 {
         return a + b;
     }
 
+    /**
+     Task 16 - fizzString
+
+     Given a string str, if the string starts with "f" return "Fizz".
+     If it ends with "b" return "Buzz".
+     If both → return "FizzBuzz".
+     Otherwise, return the string itself.
+
+     fizzString("fig") → "Fizz"
+     fizzString("dib") → "Buzz"
+     fizzString("fib") → "FizzBuzz"
+     */
+
+    public String fizzString(String str) {
+        boolean startsWithF = str.startsWith("f");
+        boolean endsWithB = str.endsWith("b");
+
+        if (startsWithF && endsWithB) return "FizzBuzz";
+        if (startsWithF) return "Fizz";
+        if (endsWithB) return "Buzz";
+
+        return str;
+    }
+
 
 
 }
