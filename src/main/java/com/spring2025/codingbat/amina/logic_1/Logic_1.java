@@ -93,5 +93,26 @@ public class Logic_1 {
         return mod <= 2 || mod >= 8;
     }
 
+    /**
+     Task 6 — teaParty
+
+     We are having a party with amounts of tea and candy.
+     Return the int outcome of the party:
+     0=bad, 1=good, 2=great.
+     A party is good (1) if both tea and candy are at least 5.
+     However, if either is at least double the other, the party is great (2).
+     Otherwise it's bad (0).
+
+     Examples:
+     teaParty(6, 8) → 1
+     teaParty(3, 8) → 0
+     teaParty(20, 6) → 2
+     */
+    public int teaParty(int tea, int candy) {
+        if (tea < 5 || candy < 5) return 0;
+        if (tea >= 2 * candy || candy >= 2 * tea) return 2;
+        return 1;
+    }
+
 
 }
