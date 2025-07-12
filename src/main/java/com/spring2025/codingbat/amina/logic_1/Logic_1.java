@@ -465,6 +465,24 @@ public class Logic_1 {
         return n + "!";
     }
 
+    /**
+     Task 27 - inOrderEqual
+
+     Return true if numbers are in increasing order.
+     If equalOk → equal values allowed.
+
+     inOrderEqual(2, 5, 11, false) → true
+     inOrderEqual(5, 7, 6, false) → false
+     inOrderEqual(5, 5, 7, true) → true
+     */
+
+    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (equalOk) {
+            return a <= b && b <= c;
+        }
+        return a < b && b < c;
+    }
+
 
 
 
