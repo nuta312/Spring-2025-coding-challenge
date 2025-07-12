@@ -367,12 +367,34 @@ public class String1 {
      */
 
     public String seeColor(String str) {
-        if (str.length()<3){
+        if (str.length() < 3) {
             return "";
-        }else if (str.substring(0,3).equals("red")){
+        } else if (str.substring(0, 3).equals("red")) {
             return "red";
-        }else if (str.length()>=4 && str.substring(0,4).equals("blue")){
+        } else if (str.length() >= 4 && str.substring(0, 4).equals("blue")) {
             return "blue";
-        }else return "";
+        } else return "";
     }
+
+    /*
+    Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
+
+
+    frontAgain("edited") → true
+    frontAgain("edit") → false
+    frontAgain("ed") → true
+     */
+
+    public boolean frontAgain(String str) {
+        if (str.length() < 2) {
+            return false;
+        }
+        String front = str.substring(0, 2);
+        if (front.equals(str.substring(str.length() - 2))) {
+            return true;
+        }
+        return false;
+    }
+
+
 }
