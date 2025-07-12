@@ -380,6 +380,26 @@ public class Logic_1 {
         return temp >= 60 && temp <= upper;
     }
 
+    /**
+     Task 22 - alarmClock
+
+     Weekdays: alarm at "7:00", weekends: "10:00".
+     If on vacation → weekdays "10:00", weekends "off".
+
+     alarmClock(1, false) → "7:00"
+     alarmClock(0, false) → "10:00"
+     alarmClock(0, true) → "off"
+     */
+
+    public String alarmClock(int day, boolean vacation) {
+        boolean isWeekend = (day == 0 || day == 6);
+        if (vacation) {
+            return isWeekend ? "off" : "10:00";
+        }
+        return isWeekend ? "10:00" : "7:00";
+    }
+
+
 
 
 
