@@ -12,6 +12,7 @@ doubleChar("AAbb") → "AAAAbbbb"
 doubleChar("Hi-There") → "HHii--TThheerree"
      */
     public String doubleChar(String str) {
+
         String result = "";
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
@@ -29,6 +30,7 @@ countHi("ABChi hi") → 2
 countHi("hihi") →
      */
     public int countHi(String str) {
+
         int count = 0;
         for (int i=0; i < str.length()-1; i++) {
             if (str.substring(i, i+2).equals("hi")){
@@ -47,6 +49,7 @@ catDog("catcat") → false
 catDog("1cat1cadodog") → true
      */
     public boolean catDog(String str) {
+
         int countCat = 0;
         int countDog = 0;
 
@@ -70,6 +73,7 @@ countCode("codexxcode") → 2
 countCode("cozexxcope") → 2
      */
     public int countCode(String str) {
+
         int count = 0;
 
         for (int i = 0; i <= str.length()-4; i++){
@@ -90,6 +94,7 @@ endOther("AbC", "HiaBc") → true
 endOther("abc", "abXabc") → true
      */
     public boolean endOther(String a, String b) {
+
         String a1 = a.toLowerCase();
         String b1 = b.toLowerCase();
 
@@ -102,5 +107,26 @@ endOther("abc", "abXabc") → true
         } else return false;
     }
 
+    /*
+Return true if the given string contains an appearance of "xyz" where the xyz is not directly preceeded
+by a period (.). So "xxyz" counts but "x.xyz" does not.
+
+xyzThere("abcxyz") → true
+xyzThere("abc.xyz") → false
+xyzThere("xyz.abc") → true
+     */
+    public boolean xyzThere(String str) {
+
+        boolean result = false;
+        if (str.startsWith("xyz")) result = true;
+        for (int i = 0; i <= str.length()-4; i++){
+            String str1 = str.substring(i, i + 4);
+            if(!str1.startsWith(".") && str1.endsWith("xyz") || str.startsWith("xyz")){
+                result = true;
+                break;
+            }else result = false;
+        }
+        return result;
+    }
 
 }
