@@ -425,10 +425,10 @@ public class Warmup1 {
      */
 
     public boolean in3050(int a, int b) {
-        if((a >= 30 && a <= 40) && (b >= 30 && b <= 40)){
+        if ((a >= 30 && a <= 40) && (b >= 30 && b <= 40)) {
             return true;
         }
-        if((a >= 40 && a <= 50) && (b >= 40 && b <= 50)){
+        if ((a >= 40 && a <= 50) && (b >= 40 && b <= 50)) {
             return true;
         }
 
@@ -455,6 +455,26 @@ public class Warmup1 {
         if (a >= 10 && a <= 20) return a;
         if (b >= 10 && b <= 20) return b;
         return 0;
+    }
+
+    /*
+
+    Return true if the given string contains between 1 and 3 'e' chars.
+
+
+    stringE("Hello") → true
+    stringE("Heelle") → true
+    stringE("Heelele") → false
+     */
+
+    public boolean stringE(String str) {
+        int count = 0;
+
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i)=='e') count++;
+
+        }
+        return (count>=1&&count<=3);
     }
 
 }
