@@ -483,6 +483,24 @@ public class Logic_1 {
         return a < b && b < c;
     }
 
+    /**
+     Task 28 - withoutDoubles
+
+     Return sum of two dice rolls, unless noDoubles is true and values are equal —
+     then increment one die by 1 (wrap around to 1 if it becomes 7).
+
+     withoutDoubles(2, 3, true) → 5
+     withoutDoubles(3, 3, true) → 7
+     withoutDoubles(3, 3, false) → 6
+     */
+
+    public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if (noDoubles && die1 == die2) {
+            die1 = (die1 == 6) ? 1 : die1 + 1;
+        }
+        return die1 + die2;
+    }
+
 
 
 
