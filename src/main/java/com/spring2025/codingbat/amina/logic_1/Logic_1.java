@@ -161,5 +161,29 @@ public class Logic_1 {
         return Math.max(a, b);
     }
 
+    /**
+     Task 10 — blueTicket
+
+     You have a blue lottery ticket, with ints a, b, and c on it.
+     This makes three pairs, which sum to a+b, b+c, and a+c.
+     If any pair sums to exactly 10, return 10.
+     If the sum of a+b is exactly 10 more than either of the other two sums, return 5.
+     Otherwise return 0.
+
+     Examples:
+     blueTicket(9, 1, 0) → 10
+     blueTicket(9, 2, 0) → 0
+     blueTicket(6, 1, 4) → 10
+     */
+    public int blueTicket(int a, int b, int c) {
+        int ab = a + b;
+        int bc = b + c;
+        int ac = a + c;
+
+        if (ab == 10 || bc == 10 || ac == 10) return 10;
+        if (ab == bc + 10 || ab == ac + 10) return 5;
+        return 0;
+    }
+
 
 }
