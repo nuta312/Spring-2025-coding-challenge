@@ -152,4 +152,28 @@ public class Map2 {
         }
         return map;
     }
+
+    /**
+     Task 8 – wordAppend
+
+     When a string appears the 2nd, 4th, 6th, etc. time,
+     append it to the result string.
+
+     wordAppend(["a", "b", "a"]) → "a"
+     wordAppend(["a", "b", "a", "c", "a", "d", "a"]) → "aa"
+     wordAppend(["a", "", "a"]) → "a"
+     */
+    public String wordAppend(String[] strings) {
+        Map<String, Integer> count = new HashMap<>();
+        StringBuilder result = new StringBuilder();
+
+        for (String str : strings) {
+            count.put(str, count.getOrDefault(str, 0) + 1);
+            if (count.get(str) % 2 == 0) {
+                result.append(str);
+            }
+        }
+
+        return result.toString();
+    }
 }
