@@ -292,8 +292,8 @@ public class String1 {
      */
 
     public String middleThree(String str) {
-        int half = str.length()/2;
-        return str.substring(half-1, half+2
+        int half = str.length() / 2;
+        return str.substring(half - 1, half + 2
         );
     }
 
@@ -308,11 +308,11 @@ public class String1 {
 
     public boolean hasBad(String str) {
 
-        if(str.length() < 3){
+        if (str.length() < 3) {
             return false;
-        }else if ((str.substring(0,3)).equals("bad")){
+        } else if ((str.substring(0, 3)).equals("bad")) {
             return true;
-        }else if (str.length() > 3 && str.substring(1,4).equals("bad")){
+        } else if (str.length() > 3 && str.substring(1, 4).equals("bad")) {
             return true;
         }
         return false;
@@ -328,15 +328,32 @@ public class String1 {
      */
 
     public String atFirst(String str) {
-        if(str.length()>2){
-            return str.substring(0,2);
-        }else if(str.length()==2){
+        if (str.length() > 2) {
+            return str.substring(0, 2);
+        } else if (str.length() == 2) {
             return str;
-        }else if(str.length()==1){
+        } else if (str.length() == 1) {
             return str + "@";
-        }else{
+        } else {
             return "@@";
         }
     }
 
+    /*
+    Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+
+
+    lastChars("last", "chars") → "ls"
+    lastChars("yo", "java") → "ya"
+    lastChars("hi", "") → "h@"
+     */
+
+    public String lastChars(String a, String b) {
+        if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
+            return "";
+        }
+        char lastA = a.charAt(a.length() - 1);
+        char lastB = b.charAt(b.length() - 1);
+        return "" + lastA + lastB;
+    }
 }
