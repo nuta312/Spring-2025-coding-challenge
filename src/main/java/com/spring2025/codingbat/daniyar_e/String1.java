@@ -29,7 +29,7 @@ public class String1 {
      */
 
     public String makeAbba(String a, String b) {
-        return (a+b+b+a);
+        return (a + b + b + a);
     }
 
     /*
@@ -42,7 +42,7 @@ public class String1 {
      */
 
     public String makeTags(String tag, String word) {
-        return ("<"+tag+">" + word + "</"+tag+">");
+        return ("<" + tag + ">" + word + "</" + tag + ">");
     }
 
     /*
@@ -55,7 +55,7 @@ public class String1 {
      */
 
     public String makeOutWord(String out, String word) {
-        return (out.substring(0,2)+word+out.substring(2,4));
+        return (out.substring(0, 2) + word + out.substring(2, 4));
     }
 
     /*
@@ -68,8 +68,8 @@ public class String1 {
      */
 
     public String extraEnd(String str) {
-        String last = str.substring(str.length()-2);
-        return last+last+last;
+        String last = str.substring(str.length() - 2);
+        return last + last + last;
     }
 
     /*
@@ -82,8 +82,8 @@ public class String1 {
      */
 
     public String firstTwo(String str) {
-        if(str.length() >= 2){
-            return str.substring(0,2);
+        if (str.length() >= 2) {
+            return str.substring(0, 2);
         } else {
             return str;
         }
@@ -99,9 +99,21 @@ public class String1 {
      */
 
     public String firstHalf(String str) {
-        String str1 = str.substring(0, str.length()/2);
+        String str1 = str.substring(0, str.length() / 2);
         return str1;
     }
 
+    /*
+    Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
 
+
+    withoutEnd("Hello") → "ell"
+    withoutEnd("java") → "av"
+    withoutEnd("coding") → "odin"
+     */
+
+    public String withoutEnd(String str) {
+        String first = str.substring(1, str.length() - 1);
+        return first;
+    }
 }
