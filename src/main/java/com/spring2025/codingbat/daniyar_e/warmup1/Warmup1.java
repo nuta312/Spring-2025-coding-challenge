@@ -31,11 +31,11 @@ public class Warmup1 {
      */
 
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        if(aSmile && bSmile){
+        if (aSmile && bSmile) {
             return true;
-        }else if(!aSmile && !bSmile){
+        } else if (!aSmile && !bSmile) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -50,9 +50,9 @@ public class Warmup1 {
      */
 
     public int sumDouble(int a, int b) {
-        if(a == b){
-            return (a+b)*2;
-        }else {
+        if (a == b) {
+            return (a + b) * 2;
+        } else {
             return a + b;
         }
     }
@@ -67,11 +67,11 @@ public class Warmup1 {
      */
 
     public int diff21(int n) {
-        if(n > 21){
-            return (n-21)*2;
-        }else if(n < 21){
-            return 21-n;
-        }else{
+        if (n > 21) {
+            return (n - 21) * 2;
+        } else if (n < 21) {
+            return 21 - n;
+        } else {
             return 0;
         }
     }
@@ -99,9 +99,9 @@ public class Warmup1 {
      */
 
     public boolean makes10(int a, int b) {
-        if (a==10 || b==10){
+        if (a == 10 || b == 10) {
             return true;
-        }else if (a+b==10){
+        } else if (a + b == 10) {
             return true;
         }
         return false;
@@ -117,7 +117,7 @@ public class Warmup1 {
      */
 
     public boolean nearHundred(int n) {
-        return ((Math.abs(100-n) <=10) || (Math.abs(200-n) <=10));
+        return ((Math.abs(100 - n) <= 10) || (Math.abs(200 - n) <= 10));
 
     }
 
@@ -131,10 +131,10 @@ public class Warmup1 {
      */
 
     public boolean posNeg(int a, int b, boolean negative) {
-        if(negative){
-            return (a<0 && b<0);
-        }else{
-            return (a<0 && b >0)||(a>0&&b<0);
+        if (negative) {
+            return (a < 0 && b < 0);
+        } else {
+            return (a < 0 && b > 0) || (a > 0 && b < 0);
         }
     }
 
@@ -148,9 +148,9 @@ public class Warmup1 {
      */
 
     public String notString(String str) {
-        if(str.length() >= 3 && str.substring(0,3).equals("not")){
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
             return str;
-        }else{
+        } else {
             return "not " + str;
         }
     }
@@ -167,9 +167,9 @@ public class Warmup1 {
     public String missingChar(String str, int n) {
         String strFront = str.substring(0, n);
 
-        String strBack = str.substring(n+1, str.length());
+        String strBack = str.substring(n + 1, str.length());
 
-        return strFront+strBack;
+        return strFront + strBack;
     }
 
     /*
@@ -182,12 +182,12 @@ public class Warmup1 {
      */
 
     public String frontBack(String str) {
-        if (str.length() <=1){
+        if (str.length() <= 1) {
             return str;
         }
-        String s = str.substring(1, str.length()-1);
+        String s = str.substring(1, str.length() - 1);
 
-        return str.charAt(str.length()-1) + s + str.charAt(0);
+        return str.charAt(str.length() - 1) + s + str.charAt(0);
     }
 
     /*
@@ -201,12 +201,12 @@ public class Warmup1 {
 
     public String front3(String str) {
         String front;
-        if(str.length()>=3){
-            front= str.substring(0,3);
-        }else {
+        if (str.length() >= 3) {
+            front = str.substring(0, 3);
+        } else {
             front = str;
         }
-        return front+front+front;
+        return front + front + front;
     }
 
     /*
@@ -219,10 +219,10 @@ public class Warmup1 {
      */
 
     public String backAround(String str) {
-        if (str.length()==1){
-            return str+str+str;
+        if (str.length() == 1) {
+            return str + str + str;
         }
-        String s = str.substring(str.length()-1);
+        String s = str.substring(str.length() - 1);
         return s + str + s;
 
     }
@@ -237,7 +237,7 @@ public class Warmup1 {
      */
 
     public boolean or35(int n) {
-        return n % 3 ==0 || n % 5 == 0;
+        return n % 3 == 0 || n % 5 == 0;
 
     }
 
@@ -252,13 +252,14 @@ public class Warmup1 {
      */
 
     public String front22(String str) {
-        if(str.length()<=1){
+        if (str.length() <= 1) {
             return str + str + str;
         }
-        String s = str.substring(0,2);
-        if (str.length()>=2){
-            return s+ str+s;
-        }return s+str+s;
+        String s = str.substring(0, 2);
+        if (str.length() >= 2) {
+            return s + str + s;
+        }
+        return s + str + s;
     }
 
     /*
@@ -271,7 +272,7 @@ public class Warmup1 {
      */
 
     public boolean startHi(String str) {
-        if(str.startsWith("hi")){
+        if (str.startsWith("hi")) {
             return true;
         }
         return false;
@@ -287,9 +288,9 @@ public class Warmup1 {
      */
 
     public boolean icyHot(int temp1, int temp2) {
-        if(temp1 < 0 && temp2 > 100){
+        if (temp1 < 0 && temp2 > 100) {
             return true;
-        }else if(temp2 < 0 && temp1 > 100){
+        } else if (temp2 < 0 && temp1 > 100) {
             return true;
         }
         return false;
@@ -305,7 +306,7 @@ public class Warmup1 {
      */
 
     public boolean in1020(int a, int b) {
-        return((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
+        return ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
 
     }
 
@@ -319,6 +320,24 @@ public class Warmup1 {
      */
 
     public boolean hasTeen(int a, int b, int c) {
-        return((a >= 13 && a <=19)||(b >= 13 && b <=19)||(c >= 13 && c <=19));
+        return ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19));
     }
+
+    /*
+    We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+
+
+    loneTeen(13, 99) → true
+    loneTeen(21, 19) → true
+    loneTeen(13, 13) → false
+     */
+
+    public boolean loneTeen(int a, int b) {
+        boolean a1 = (a >= 13 && a <= 19);
+        boolean b1 = (b >= 13 && b <= 19);
+
+        return (a1 && !b1) || (!a1 && b1);
+    }
+
+
 }
