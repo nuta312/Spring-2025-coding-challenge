@@ -148,4 +148,23 @@ sumDigits("Chocolate") → 0
         return count;
     }
 
+    /*
+Given a string, return the longest substring that appears at both the beginning and end of the
+string without overlapping. For example, sameEnds("abXab") is "ab".
+
+sameEnds("abXYab") → "ab"
+sameEnds("xx") → "x"
+sameEnds("xxx") → "x"
+     */
+    public String sameEnds(String string) {
+
+        int len = string.length()/2;
+        for (int i = len; i >=0; i--){
+            String start = string.substring(0, i);
+            String end = string.substring(string.length() - i);
+
+            if (start.equals(end)) return start;
+        }
+        return "";
+    }
 }
