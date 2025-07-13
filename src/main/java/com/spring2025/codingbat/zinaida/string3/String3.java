@@ -242,4 +242,33 @@ sumNumbers("7 11") → 18
         return result;
     }
 
+    /*
+Given a string, return a string where every appearance of the lowercase word "is" has been replaced
+with "is not". The word "is" should not be immediately preceeded or followed by a letter --
+so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+
+notReplace("is test") → "is not test"
+notReplace("is-is") → "is not-is not"
+notReplace("This is right") → "This is not right"
+     */
+    public String notReplace(String str) {
+
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+        while (i < str.length()){
+            if(str.startsWith("is", i)){
+                boolean before = (i == 0) || !Character.isLetter(str.charAt(i -1));
+                boolean after = (i +2 >= str.length()) || !Character.isLetter(str.charAt(i + 2));
+                if (before && after){
+                    result.append("is not");
+                    i+=2;
+                    continue;
+                }
+            }
+            result.append(str.charAt(i));
+            i++;
+        }
+        return result.toString();
+    }
+
 }
