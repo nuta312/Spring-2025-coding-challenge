@@ -118,9 +118,9 @@ countTriple("a") → 0
     public int countTriple(String str) {
 
         int countTriple = 0;
-        for (int i = 0; i < str.length() -2; i++){
-            if (str.charAt(i) == str.charAt(i +1) && str.charAt(i) == str.charAt(i+2)){
-                countTriple ++;
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.charAt(i) == str.charAt(i + 1) && str.charAt(i) == str.charAt(i + 2)) {
+                countTriple++;
             }
         }
         return countTriple;
@@ -140,8 +140,8 @@ sumDigits("Chocolate") → 0
         int count = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            if (Character.isDigit(str.charAt(i))){
-                String char1 = str.substring(i,i+1);
+            if (Character.isDigit(str.charAt(i))) {
+                String char1 = str.substring(i, i + 1);
                 count += Integer.parseInt(char1);
             }
         }
@@ -158,8 +158,8 @@ sameEnds("xxx") → "x"
      */
     public String sameEnds(String string) {
 
-        int len = string.length()/2;
-        for (int i = len; i >=0; i--){
+        int len = string.length() / 2;
+        for (int i = len; i >= 0; i--) {
             String start = string.substring(0, i);
             String end = string.substring(string.length() - i);
 
@@ -199,16 +199,47 @@ maxBlock("") → 0
         int count = 1;
         int maxCount = 0;
         for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i - 1)){
+            if (str.charAt(i) == str.charAt(i - 1)) {
                 count++;
             } else {
                 count = 1;
             }
-            if (count > maxCount){
+            if (count > maxCount) {
                 maxCount = count;
             }
         }
         return maxCount;
+    }
+
+    /*
+Given a string, return the sum of the numbers appearing in the string, ignoring all other characters.
+A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a
+char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+sumNumbers("abc123xyz") → 123
+sumNumbers("aa11b33") → 44
+sumNumbers("7 11") → 18
+     */
+    public int sumNumbers(String str) {
+
+        int result = 0;
+        String num = "";
+        int i = 0;
+        while (i < str.length()) {
+            if (Character.isDigit(str.charAt(i))) {
+                num += str.charAt(i);
+            } else {
+                if (!num.isEmpty()) {
+                    result += Integer.parseInt(num);
+                    num = "";
+                }
+            }
+            i++;
+        }
+        if (!num.isEmpty()) {
+            result += Integer.parseInt(num);
+        }
+        return result;
     }
 
 }
