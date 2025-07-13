@@ -58,4 +58,28 @@ withoutString("Hello there", "x") → "Hello there"
         return result.toString();
     }
 
+    /*
+Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number
+of appearances of "not" anywhere in the string (case sensitive).
+
+equalIsNot("This is not") → false
+equalIsNot("This is notnot") → true
+equalIsNot("noisxxnotyynotxisi") → true
+     */
+    public boolean equalIsNot(String str) {
+
+        int countIs = 0;
+        int counNot = 0;
+
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == 'i' && str.charAt(i + 1) == 's') {
+                countIs++;
+            }
+            if (str.charAt(i) == 'n' && str.charAt(i + 1) == 'o' && str.charAt(i + 2) == 't') {
+                counNot++;
+            }
+        }
+        return countIs == counNot;
+    }
+
 }
