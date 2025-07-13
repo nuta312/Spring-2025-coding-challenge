@@ -404,13 +404,45 @@ plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
         StringBuilder result = new StringBuilder();
         int i = 0;
         while (i < str.length())
-            if(str.startsWith(word, i)){
+            if (str.startsWith(word, i)) {
 
                 result.append(word);
                 i += word.length();
-            } else{result.append('+');
+            } else {
+                result.append('+');
                 i++;
             }
+        return result.toString();
+    }
+
+    /*
+Given a string and a non-empty word string, return a string made of each char just before and just after
+every appearance of the word in the string. Ignore cases where there is no char before or after the word,
+and a char may be included twice if it is between two words.
+
+wordEnds("abcXY123XYijk", "XY") → "c13i"
+wordEnds("XY123XY", "XY") → "13"
+wordEnds("XY1XY", "XY") → "11"
+     */
+    public String wordEnds(String str, String word) {
+
+        StringBuilder result = new StringBuilder();
+
+        int i = 0;
+
+        while (i < str.length()) {
+            if (str.startsWith(word, i)) {
+                if (i > 0) {
+                    result.append(str.charAt(i - 1));
+                }
+                if (i + word.length() < str.length()) {
+                    result.append(str.charAt(i + word.length()));
+                }
+                i += word.length();
+            } else {
+                i++;
+            }
+        }
         return result.toString();
     }
 }
