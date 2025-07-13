@@ -1,4 +1,5 @@
 package com.spring2025.codingbat.zinaida.string2;
+
 /*
 @author Zinaida
  */
@@ -32,8 +33,8 @@ countHi("hihi") →
     public int countHi(String str) {
 
         int count = 0;
-        for (int i=0; i < str.length()-1; i++) {
-            if (str.substring(i, i+2).equals("hi")){
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 2).equals("hi")) {
                 count += 1;
             }
         }
@@ -53,11 +54,11 @@ catDog("1cat1cadodog") → true
         int countCat = 0;
         int countDog = 0;
 
-        for (int i = 0; i <= str.length()-3; i++){
-            if (str.substring(i, i+3).equals("cat")){
+        for (int i = 0; i <= str.length() - 3; i++) {
+            if (str.substring(i, i + 3).equals("cat")) {
                 countCat += 1;
             }
-            if(str.substring(i, i+3).equals("dog")){
+            if (str.substring(i, i + 3).equals("dog")) {
                 countDog += 1;
             }
         }
@@ -76,8 +77,8 @@ countCode("cozexxcope") → 2
 
         int count = 0;
 
-        for (int i = 0; i <= str.length()-4; i++){
-            if(str.substring(i, i+4).startsWith("co") && str.substring(i, i+4).endsWith("e")){
+        for (int i = 0; i <= str.length() - 4; i++) {
+            if (str.substring(i, i + 4).startsWith("co") && str.substring(i, i + 4).endsWith("e")) {
                 count += 1;
             }
         }
@@ -119,12 +120,12 @@ xyzThere("xyz.abc") → true
 
         boolean result = false;
         if (str.startsWith("xyz")) result = true;
-        for (int i = 0; i <= str.length()-4; i++){
+        for (int i = 0; i <= str.length() - 4; i++) {
             String str1 = str.substring(i, i + 4);
-            if(!str1.startsWith(".") && str1.endsWith("xyz") || str.startsWith("xyz")){
+            if (!str1.startsWith(".") && str1.endsWith("xyz") || str.startsWith("xyz")) {
                 result = true;
                 break;
-            }else result = false;
+            } else result = false;
         }
         return result;
     }
@@ -138,7 +139,7 @@ bobThere("bac") → false
      */
     public boolean bobThere(String str) {
 
-        for (int i = 0; i < str.length()-2; i++) {
+        for (int i = 0; i < str.length() - 2; i++) {
             String str1 = str.substring(i, i + 3);
             if (str1.startsWith("b") && str1.endsWith("b")) return true;
         }
@@ -156,7 +157,7 @@ xyBalance("yaaxbb") → false
     public boolean xyBalance(String str) {
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'x'){
+            if (str.charAt(i) == 'x') {
                 if (!str.substring(i + 1).contains("y"))
                     return false;
             }
@@ -199,7 +200,7 @@ repeatEnd("Hello", 1) → "o"
     public String repeatEnd(String str, int n) {
 
         String result = "";
-        String end = str.substring(str.length()- n);
+        String end = str.substring(str.length() - n);
 
         for (int i = 0; i < n; i++) {
             result += end;
@@ -297,9 +298,30 @@ getSandwich("xxbreadyy") → ""
 
         int first = str.indexOf("bread");
         int last = str.lastIndexOf("bread");
-        if (first == -1 || first == last){
+        if (first == -1 || first == last) {
             return "";
         }
-        return str.substring(first + 5,last);
+        return str.substring(first + 5, last);
     }
+
+    /*
+Returns true if for every '*' (star) in the string, if there are chars both immediately before and after
+the star, they are the same.
+
+sameStarChar("xy*yzz") → true
+sameStarChar("xy*zzz") → false
+sameStarChar("*xa*az") → true
+     */
+    public boolean sameStarChar(String str) {
+
+        for (int i = 1; i < str.length() - 1; i++) {
+            if (str.charAt(i) == '*') {
+                if (str.charAt(i - 1) != str.charAt(i + 1)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
 }
