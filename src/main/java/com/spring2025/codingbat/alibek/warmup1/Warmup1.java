@@ -97,6 +97,10 @@ public class Warmup1 {
         }return front + front + front;
     }
 
+    public String backAround(String str) {
+        String s = str.substring(str.length() - 1);
+        return s + str + s;
+    }
 
 
 }
