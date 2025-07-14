@@ -63,5 +63,12 @@ public class Warmup1 {
         return ((a > 0 && b < 0 && !negative) || (b > 0 && a < 0 && !negative)
                 || (a < 0 && b < 0 && negative)) ? true : false;}
 
+    public String notString(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            return str;
+        }return "not " + str;
+    }
+
+
 
 }
