@@ -145,5 +145,15 @@ public class Warmup1 {
         }return str;
     }
 
+    public boolean mixStart(String str) {
+        if (str.startsWith("mix")){
+            return true;
+        }else if (str.endsWith(" ix") || str.startsWith("pix") || str.startsWith("9ix" ) || str.startsWith("nix")){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 
 }
