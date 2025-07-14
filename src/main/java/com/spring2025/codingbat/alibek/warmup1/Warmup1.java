@@ -198,5 +198,20 @@ public class Warmup1 {
         }
     }
 
+    public int max1020(int a, int b) {
+        if (b > a) {
+            int max = a;
+            a = b;
+            b = max;
+        }if (a >= 10 && a <= 20) {
+            return a;
+        } else if (b >= 10 && b <= 20) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
+
+
 
 }
