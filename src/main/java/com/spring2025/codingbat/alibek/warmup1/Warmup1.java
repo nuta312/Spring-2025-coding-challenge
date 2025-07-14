@@ -75,5 +75,18 @@ public class Warmup1 {
         return front + back;
     }
 
+    public String frontBack(String str) {
+        String result = "";
+        if (str.length() > 1){
+            String a = str.substring(0,1);
+            String b = str.substring(str.length()-1, str.length());
+            String c = str.substring(1, str.length()-1);
+            result = b + c + a;
+        }else {
+            result = str;
+        }
+        return result;
+    }
+
 
 }
