@@ -252,4 +252,19 @@ nTwice("Chocolate", 1) → "Ce"
             return str.substring(index, index + 2);
         }
     }
+
+    /*
+
+Given a string of odd length, return the string length 3 from
+ its middle, so "Candy" yields "and". The string length will be at least 3.
+
+middleThree("Candy") → "and"
+middleThree("and") → "and"
+middleThree("solving") → "lvi"
+     */
+    public String middleThree(String str) {
+        int s = str.length() / 2;
+        return str.substring(s - 1, s + 2);
+    }
+
 }
