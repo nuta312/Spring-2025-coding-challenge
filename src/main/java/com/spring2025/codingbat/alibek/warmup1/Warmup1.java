@@ -106,5 +106,13 @@ public class Warmup1 {
         return (n % 3 == 0) || (n % 5 == 0);
     }
 
+    public String front22(String str) {
+        int i = 2;
+        if (i > str.length()) {
+            i = str.length();
+        }String s = str.substring(0, i);
+        return s + str + s;
+    }
+
 
 }
