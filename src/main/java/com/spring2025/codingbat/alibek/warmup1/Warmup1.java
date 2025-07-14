@@ -223,5 +223,14 @@ public class Warmup1 {
         return(a % 10 == b % 10)? true : false;
     }
 
+    public String endUp(String str) {
+        if (str.length() <= 3){
+            return str.toUpperCase();
+        }int i = str.length() - 3;
+        String string = str.substring(0, i);
+        String s  = str.substring(i);
+        return string + s.toUpperCase();
+    }
+
 
 }
