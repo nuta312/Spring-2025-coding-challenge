@@ -114,5 +114,7 @@ public class Warmup1 {
         return s + str + s;
     }
 
+    public boolean startHi(String str) {  return (str.startsWith("hi")) ? true : false;}
+
 
 }
