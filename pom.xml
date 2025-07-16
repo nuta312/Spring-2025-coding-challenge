@@ -14,17 +14,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-
     <dependencies>
-
-
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.38</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -33,11 +29,5 @@
             <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
-
-
-
 </project>
