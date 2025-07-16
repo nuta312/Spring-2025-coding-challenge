@@ -266,6 +266,21 @@ public static boolean sameFirstLast(int[]nums){
         return new int[]{a[0],a[1],b[0],b[1]};
     }
 
+    //Given an array of ints, swap the first and last elements in the array. Return the modified array. The array length will be at least 1.
+    //
+    //
+    //swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
+    //swapEnds([1, 2, 3]) → [3, 2, 1]
+    //swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
+
+
+    public int[] swapEnds(int[] nums) {
+        int temp=nums[0]; // сохраняем первый элемент
+        nums[0]=nums[nums.length-1];// первый элемент становится равен последнему
+        nums[nums.length-1]=temp;// последний элемент становится равен тому, что было первым
+        return nums;// вернуть изменённый массив
+    }
+
 
 
 
