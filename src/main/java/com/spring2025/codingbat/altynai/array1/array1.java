@@ -305,6 +305,22 @@ public static boolean sameFirstLast(int[]nums){
         return Math.max(first, Math.max(mid, last));
     }
 
+    //
+    //Given an int array of any length, return a new array of its first 2 elements. If the array is smaller than length 2, use whatever elements are present.
+    //
+    //
+    //frontPiece([1, 2, 3]) → [1, 2]
+    //frontPiece([1, 2]) → [1, 2]
+    //frontPiece([1]) → [1]
+
+    public int[] frontPiece(int[] nums) {
+        int len=Math.min (2, nums.length);
+        int[]result=new int[len];
+        for(int i=0; i<len; i++){
+            result[i]=nums[i];
+        }
+        return result;
+    }
 
 
 
