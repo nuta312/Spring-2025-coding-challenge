@@ -119,4 +119,16 @@ public class warmup1 {
     public boolean posNeg(int a, int b, boolean negative) {
         return ((a > 0 && b < 0 && !negative) || (b > 0 && a < 0 && !negative) || (a < 0 && b < 0 && negative))  ? true : false;
     }
+
+    //Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+    //
+    //
+    //notString("candy") → "not candy"
+    //notString("x") → "not x"
+    //notString("not bad") → "not bad"
+
+    public String notString(String str) {
+        return (str.startsWith("not") ? str : "not ".concat(str));
+    }
+
 }
