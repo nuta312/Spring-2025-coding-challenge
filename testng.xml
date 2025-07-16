@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Spring2025LoginTest">
+       <parameter name="browser" value="Edge"/>
+        <parameter name="username" value="superadmin"/>
+        <parameter name="password" value="12345"/>
+
+
+        <groups>
+           <run>
+               <include name="loginTests"/>
+           </run>
+       </groups>
+        <classes>
+            <class name="testing.ParametrsDemo"/>
+
+
+        </classes>
+
+    </test>
+</suite>
+
+<!--        <classes>-->
+<!--            <class name="com.autobots.bankApp.Demo">-->
+<!--                <methods>-->
+<!--                    <include name="tesr1"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.spring2025.altynai.testing_demo.Calculator">-->
+<!--                <methods>-->
+<!--                    <include name="testAdd"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testing.BeforeClassDemo">-->
+<!--                <methods>-->
+<!--                    <include name="test"/>-->
+<!--                    <include name="test1"/>-->
+<!--                    <include name="test2"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testing.BeforeMethodDemo">-->
+<!--                <methods>-->
+<!--                    <include name="test"/>-->
+<!--                    <include name="test1"/>-->
+<!--                    <include name="test2"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
