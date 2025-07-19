@@ -158,6 +158,15 @@ public class String1 {
         String last = str.substring(str.length() - 1);
         return mains + last + prelast;
     }
+    // 25.
+    public String seeColor(String str) {
+        if(str.startsWith("red")){
+            return "red";
+        } else if  (str.contains("blue")){
+            return "blue";
+        } else
+            return "";
+    }
 
 
 
