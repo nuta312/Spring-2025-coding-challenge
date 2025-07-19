@@ -24,5 +24,12 @@ public class String1 {
     public String extraEnd(String str) {
         return str.substring(str.length()-2) + str.substring(str.length()-2) + str.substring(str.length()-2);
     }
+    // 6.
+    public String firstTwo(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+        return str.substring(0,2);
+    }
 
 }
