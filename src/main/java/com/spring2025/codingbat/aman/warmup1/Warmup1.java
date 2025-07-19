@@ -16,6 +16,16 @@ public class Warmup1 {
         } else
             return false;
     }
+    // 3.
+    public int sumDouble(int a, int b) {
+        int sum = a + b;
+        if (a == b){
+            sum *= 2;
+        }
+        return sum;
+    }
 
 
-}
+
+
+ }
