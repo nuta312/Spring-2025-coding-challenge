@@ -66,6 +66,13 @@ public class String1 {
         String s2 = str.substring(2);
         return s2 + s1;
     }
+    // 12.
+    public String right2(String str) {
+        if(str.length() <= 2){
+            return str;
+        }
+        return str.substring(str.length()-2) + str.substring(0,str.length()-2);
+    }
 
 
 }
