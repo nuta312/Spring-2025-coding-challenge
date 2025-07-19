@@ -32,7 +32,15 @@ public class Warmup1 {
             return 21 - n;
         }
     }
-
+    // 5.
+    public boolean parrotTrouble(boolean talking, int hour) {
+        if (hour < 7 || hour >20){
+            if(talking){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
