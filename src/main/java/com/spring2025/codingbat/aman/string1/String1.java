@@ -93,6 +93,10 @@ public class String1 {
         String midright = str.substring(str.length()/2,str.length()/2+1);
         return midleft+midright;
     }
+    // 16.
+    public boolean endsLy(String str) {
+        return str.endsWith("ly");
+    }
 
 
 }
