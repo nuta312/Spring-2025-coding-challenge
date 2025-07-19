@@ -60,6 +60,12 @@ public class String1 {
         }
         return a.substring(1) + b.substring(1);
     }
+    // 11.
+    public String left2(String str) {
+        String s1 = str.substring(0,2);
+        String s2 = str.substring(2);
+        return s2 + s1;
+    }
 
 
 }
