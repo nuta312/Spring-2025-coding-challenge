@@ -80,6 +80,12 @@ public class String1 {
         }
         return str.substring(str.length()-1);
     }
-
+    // 14.
+    public String withouEnd2(String str) {
+        if(str.length() <= 1) {
+            return "";
+        }
+        return str.substring(1,str.length()-1);
+    }
 
 }
