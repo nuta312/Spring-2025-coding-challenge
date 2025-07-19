@@ -20,5 +20,9 @@ public class String1 {
     public String makeOutWord(String out, String word) {
         return out.substring(0,2) + word + out.substring(2,4);
     }
+    // 5.
+    public String extraEnd(String str) {
+        return str.substring(str.length()-2) + str.substring(str.length()-2) + str.substring(str.length()-2);
+    }
 
 }
