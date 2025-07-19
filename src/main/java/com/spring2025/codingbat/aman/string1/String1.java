@@ -232,6 +232,26 @@ public class String1 {
             return "";
         }
     }
+    // 32.
+    public String withoutX(String str) {
+        int len = str.length();
+        if (len == 0) {
+            return "";
+        }
+        if (len == 1) {
+            return str.charAt(0) == 'x' ? "" : str;
+        }
+        int start = 0;
+        int end = len;
+        if (str.charAt(0) == 'x') {
+            start = 1;
+        }
+        if (str.charAt(len - 1) == 'x') {
+            end = len - 1;
+        }
+        return str.substring(start, end);
+    }
+
 
 
 }
