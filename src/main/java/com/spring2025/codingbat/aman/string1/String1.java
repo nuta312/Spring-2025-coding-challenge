@@ -108,5 +108,15 @@ public class String1 {
         }
         return str.substring(index, index + 2);
     }
+    // 19.
+    public String middleThree(String str) {
+        if(str.length() < 3) {
+            return str;
+        } else if(str.length() % 2 != 0){
+            return str.substring(str.length() / 2 - 1, str.length() / 2 + 2);
+        }
+        return "";
+    }
+
 
 }
