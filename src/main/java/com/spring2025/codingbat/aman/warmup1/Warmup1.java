@@ -95,6 +95,14 @@ public class Warmup1 {
         }else
             return false;
     }
+    // 15.
+    public String front22(String str) {
+        if(str.length() <= 2){
+            return str + str + str;
+        }
+        String front2 = str.substring(0,2);
+        return front2 + str + front2;
+    }
 
 
 
