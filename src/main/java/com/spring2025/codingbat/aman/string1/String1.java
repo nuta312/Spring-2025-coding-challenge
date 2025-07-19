@@ -101,6 +101,12 @@ public class String1 {
     public String nTwice(String str, int n) {
         return str.substring(0, n) + str.substring(str.length() - n);
     }
-
+    // 18.
+    public String twoChar(String str, int index) {
+        if (index < 0 || index + 2 > str.length()){
+            return str.substring(0,2);
+        }
+        return str.substring(index, index + 2);
+    }
 
 }
