@@ -239,6 +239,14 @@ public class Warmup1 {
         String back = str.substring(st1);
         return front + back.toUpperCase();
     }
+    // 31.
+    public String everyNth(String str, int n) {
+        String st1 = "";
+        for (int i = 0; i < str.length() ; i = i+n) {
+            st1 = st1 + str.charAt(i);
+        }
+        return st1;
+    }
 
 
 
