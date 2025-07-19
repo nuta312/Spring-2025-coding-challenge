@@ -143,6 +143,12 @@ public class String1 {
         String last = b.length() > 0 ? b.substring(b.length() - 1) : "@";
         return first + last ;
     }
-
+    // 23.
+    public String conCat(String a, String b) {
+        if (a.length() > 0 && b.length() > 0 && a.charAt(a.length() - 1) == b.charAt(0)) {
+            return a + b.substring(1);
+        }
+        return a + b;
+    }
 
 }
