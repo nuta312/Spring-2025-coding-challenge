@@ -97,6 +97,10 @@ public class String1 {
     public boolean endsLy(String str) {
         return str.endsWith("ly");
     }
+    // 17.
+    public String nTwice(String str, int n) {
+        return str.substring(0, n) + str.substring(str.length() - n);
+    }
 
 
 }
