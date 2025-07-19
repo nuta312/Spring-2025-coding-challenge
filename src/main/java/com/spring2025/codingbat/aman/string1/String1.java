@@ -150,5 +150,16 @@ public class String1 {
         }
         return a + b;
     }
+    // 24.
+    public String lastTwo(String str) {
+        if (str.length() < 2) return str;
+        String mains = str.substring(0, str.length() - 2);
+        String prelast = str.substring(str.length() - 2, str.length() - 1);
+        String last = str.substring(str.length() - 1);
+        return mains + last + prelast;
+    }
+
+
+
 
 }
