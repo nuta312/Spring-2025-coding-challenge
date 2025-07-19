@@ -64,6 +64,10 @@ public class Warmup1 {
         } else
             return "not " + str;
     }
+    // 10.
+    public String missingChar(String str, int n) {
+        return str.substring(0,n) + str.substring(n + 1);
+    }
 
 
 
