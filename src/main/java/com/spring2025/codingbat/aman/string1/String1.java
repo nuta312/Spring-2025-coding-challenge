@@ -251,6 +251,25 @@ public class String1 {
         }
         return str.substring(start, end);
     }
+    // 33.
+    public String withoutX2(String str) {
+        String result = str;
+
+        if (str.length() >= 2) {
+
+            if (str.charAt(0) == 'x') {
+                result = result.substring(1);
+            }
+
+            if (result.length() > 0 && result.charAt(0) == 'x') {
+                result = result.substring(1);
+            }
+        } else if (str.length() == 1 && str.charAt(0) == 'x') {
+            result = "";
+        }
+
+        return result;
+    }
 
 
 
