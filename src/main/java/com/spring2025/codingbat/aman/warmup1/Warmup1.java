@@ -41,6 +41,10 @@ public class Warmup1 {
         }
         return false;
     }
+    // 6.
+    public boolean makes10(int a, int b) {
+        return (a == 10 || b == 10 || a+b == 10);
+    }
 
 
 
