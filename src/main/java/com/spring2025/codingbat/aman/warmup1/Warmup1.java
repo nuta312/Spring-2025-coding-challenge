@@ -133,6 +133,14 @@ public class Warmup1 {
         boolean bTeen = b >= 13 && b <=19;
         return ((!aTeen) && (bTeen)) || ((aTeen) && (!bTeen));
     }
+    // 21.
+    public String delDel(String str) {
+        if (str.length() >= 4 && str.substring(1,4).equals("del")){
+            return str.replace("del","");
+        }
+        return str;
+    }
+
 
 
 
