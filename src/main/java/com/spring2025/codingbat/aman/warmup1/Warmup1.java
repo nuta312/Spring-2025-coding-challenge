@@ -187,6 +187,15 @@ public class Warmup1 {
         }
         return 0;
     }
+    // 26.
+    public boolean in3050(int a, int b) {
+        boolean a1 = (a >= 30 && a <= 40) && (b >= 30 && b <= 40);
+        boolean b1 = (a >= 40 && a <= 50) && (b >= 40 && b <= 50);
+        if(a1){
+            return a1;
+        } else
+            return b1;
+    }
 
 
 
