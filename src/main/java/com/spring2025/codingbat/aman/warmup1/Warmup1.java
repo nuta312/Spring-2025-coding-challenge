@@ -229,6 +229,16 @@ public class Warmup1 {
         }
         return false;
     }
+    // 30.
+    public String endUp(String str) {
+        if (str.length() < 3){
+            return str.toUpperCase();
+        }
+        int st1 = str.length()-3;
+        String front = str.substring(0,st1);
+        String back = str.substring(st1);
+        return front + back.toUpperCase();
+    }
 
 
 
