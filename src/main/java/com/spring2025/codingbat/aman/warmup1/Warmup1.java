@@ -68,6 +68,14 @@ public class Warmup1 {
     public String missingChar(String str, int n) {
         return str.substring(0,n) + str.substring(n + 1);
     }
+    // 11.
+    public String frontBack(String str) {
+        if (str.length() <= 1){
+            return str;
+        }
+        String mid = str.substring(1,str.length()-1);
+        return str.charAt(str.length()-1) + mid + str.charAt(0);
+    }
 
 
 
