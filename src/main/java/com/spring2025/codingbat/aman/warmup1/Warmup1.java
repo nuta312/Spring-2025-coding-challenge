@@ -103,6 +103,13 @@ public class Warmup1 {
         String front2 = str.substring(0,2);
         return front2 + str + front2;
     }
+    // 16.
+    public boolean startHi(String str) {
+        if(str.startsWith("hi")){
+            return true;
+        }
+        return false;
+    }
 
 
 
