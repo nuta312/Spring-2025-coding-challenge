@@ -140,6 +140,17 @@ public class Warmup1 {
         }
         return str;
     }
+    // 22.
+    public boolean mixStart(String str) {
+        if (str.length() < 3) {
+            return false;
+        }
+        String str1 = str.substring(1,3);
+        if (str1.equals("ix")){
+            return true;
+        }
+        return false;
+    }
 
 
 
