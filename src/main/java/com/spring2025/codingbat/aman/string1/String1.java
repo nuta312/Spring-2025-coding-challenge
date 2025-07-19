@@ -12,5 +12,9 @@ public class String1 {
     public String makeAbba(String a, String b) {
         return a + b + b + a;
     }
+    // 3.
+    public String makeTags(String tag, String word) {
+        return "<" + tag + ">" + word + "<" + "/" + tag + ">";
+    }
 
 }
