@@ -87,5 +87,12 @@ public class String1 {
         }
         return str.substring(1,str.length()-1);
     }
+    // 15.
+    public String middleTwo(String str) {
+        String midleft = str.substring(str.length()/2 - 1, str.length()/2);
+        String midright = str.substring(str.length()/2,str.length()/2+1);
+        return midleft+midright;
+    }
+
 
 }
