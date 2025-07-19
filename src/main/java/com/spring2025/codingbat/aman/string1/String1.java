@@ -40,5 +40,19 @@ public class String1 {
     public String withoutEnd(String str) {
         return str.substring(1,str.length()-1);
     }
+    // 9.
+    public String comboString(String a, String b) {
+        String shorter = "";
+        String longer = "";
+        if (a.length() < b.length()){
+            shorter = a;
+            longer = b;
+        } else {
+            shorter = b;
+            longer = a;
+        }
+        return shorter + longer + shorter;
+    }
+
 
 }
