@@ -83,6 +83,11 @@ public class Warmup1 {
         }
         return str.substring(0,3) + str.substring(0,3) + str.substring(0,3);
     }
+    // 13.
+    public String backAround(String str) {
+        String last = str.substring(str.length()-1);
+        return last + str + last;
+    }
 
 
 
