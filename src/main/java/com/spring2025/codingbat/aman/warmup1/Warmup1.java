@@ -222,6 +222,13 @@ public class Warmup1 {
         }
         return counter >= 1 && counter <= 3;
     }
+    // 29.
+    public boolean lastDigit(int a, int b) {
+        if (a % 10 == (b%10)){
+            return true;
+        }
+        return false;
+    }
 
 
 
