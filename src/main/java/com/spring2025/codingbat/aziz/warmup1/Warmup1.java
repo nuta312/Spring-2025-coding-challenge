@@ -51,4 +51,20 @@ public class Warmup1 {
     }
 
 
+    public boolean nearHundred(int n) {
+        if(n >= 90 && n <= 110 || n >= 190 && n <= 210){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public boolean posNeg(int a, int b, boolean negative) {
+        if(negative){
+            return (a < 0 && b < 0);
+        }else{
+            return ((a < 0 && b > 0) || (a > 0 && b < 0));
+        }
+    }
 }
