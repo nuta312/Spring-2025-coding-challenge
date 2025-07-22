@@ -67,4 +67,22 @@ public class Warmup1 {
             return ((a < 0 && b > 0) || (a > 0 && b < 0));
         }
     }
+
+
+    public String notString(String str) {
+        if(str.startsWith("not")){
+            return str;
+        }else {
+            return "not " + str;
+        }
+    }
+
+
+    public String missingChar(String str, int n) {
+        String result = str.substring(0, n) + str.substring(n + 1, str.length());
+        return result;
+    }
+
+
+
 }
