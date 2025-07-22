@@ -84,5 +84,22 @@ public class Warmup1 {
     }
 
 
+    public String frontBack(String str) {
+        if (str.length() <= 1){
+            return str;
+        }else {
+            String mid = str.substring(1, str.length() - 1);
+            return str.charAt(str.length() -1 ) + mid + str.charAt(0);
+        }
+    }
 
+
+    public String front3(String str) {
+        if (str.length() < 3){
+            return str + str+ str;
+        }else {
+            String str2 = str.substring(0,3);
+            return str2 + str2+ str2;
+        }
+    }
 }
