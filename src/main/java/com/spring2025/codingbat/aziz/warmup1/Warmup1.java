@@ -181,5 +181,27 @@ public class Warmup1 {
     }
 
 
+    public String startOz(String str) {
+        String result = "";
+        if(str.length()>=1 && str.charAt(0)=='o'){
+            result += 'o';
+        }
+        if(str.length()>=2 && str.charAt(1)=='z'){
+            result += 'z';
+        }
+        return result;
+    }
+
+
+    public int intMax(int a, int b, int c) {
+        int max = a;
+        if(b>max){
+            max = b;
+        }
+        if(c>max){
+            max = c;
+        }
+        return max;
+    }
 
 }
