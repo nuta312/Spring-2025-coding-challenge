@@ -160,4 +160,26 @@ public class Warmup1 {
         return (aTeen && !bTeen) || (!aTeen && bTeen);
     }
 
+
+    public String delDel(String str) {
+        if (str.length() >= 4){
+            if(str.substring(1,4).equals("del")){
+                return str.charAt(0)+str.substring(4,str.length());
+            }
+        }
+        return str;
+    }
+
+
+    public boolean mixStart(String str) {
+        if(str.length() >= 3){
+            if(str.charAt(1)=='i' && str.charAt(2)=='x'){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
 }
