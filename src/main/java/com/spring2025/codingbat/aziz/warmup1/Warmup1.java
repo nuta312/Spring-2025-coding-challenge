@@ -204,4 +204,30 @@ public class Warmup1 {
         return max;
     }
 
+
+    public int close10(int a, int b) {
+        int distA = a - 10;
+        int distB = b - 10;
+
+        if(distA < 0){
+            distA = -distA;
+        }
+        if(distB < 0){
+            distB = -distB;
+        }
+        if(distA > distB){
+            return b;
+        }
+        if(distA < distB){
+            return a;
+        }else{
+            return 0;
+        }
+    }
+
+
+    public boolean in3050(int a, int b) {
+        return (a >= 30 && a <= 40 && b >= 30 && b <= 40 || a >= 40 && a <= 50 && b >=40 && b <= 50);
+    }
+
 }
