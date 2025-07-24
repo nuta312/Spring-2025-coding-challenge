@@ -230,4 +230,30 @@ public class Warmup1 {
         return (a >= 30 && a <= 40 && b >= 30 && b <= 40 || a >= 40 && a <= 50 && b >=40 && b <= 50);
     }
 
+
+    public int max1020(int a, int b) {
+        if(b > a){
+            int c = a;
+            a = b;
+            b = c;
+        }
+        if(a >= 10 && a <= 20){
+            return a;
+        }else if(b >= 10 && b <= 20){
+            return b;
+        }else{
+            return 0;
+        }
+    }
+
+
+    public boolean stringE(String str) {
+        int e = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i)=='e'){
+                e++;
+            }
+        }
+        return (e >= 1 && e <= 3);
+    }
 }
