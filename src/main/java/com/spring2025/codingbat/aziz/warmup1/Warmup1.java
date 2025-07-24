@@ -256,4 +256,30 @@ public class Warmup1 {
         }
         return (e >= 1 && e <= 3);
     }
+
+
+    public boolean lastDigit(int a, int b) {
+        int inta = a % 10;
+        int intb = b % 10;
+        return inta == intb;
+    }
+
+
+    public String endUp(String str) {
+        if(str.length() < 3){
+            return str.toUpperCase();
+        }else{
+            String last = str.substring(str.length()-3,str.length());
+            return str.substring(0,str.length()-3)+last.toUpperCase();
+        }
+    }
+
+
+    public String everyNth(String str, int n) {
+        String result = "";
+        for(int i = 0; i< str.length(); i += n){
+            result += str.charAt(i);
+        }
+        return result;
+    }
 }
