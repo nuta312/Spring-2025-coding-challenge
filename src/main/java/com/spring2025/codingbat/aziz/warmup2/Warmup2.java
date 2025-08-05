@@ -92,5 +92,25 @@ public class Warmup2 {
     }
 
 
+    public boolean arrayFront9(int[] nums) {
+        int end = nums.length;
+        if(end > 4) end = 4;
+        boolean front9 = false;
+        for(int i = 0; i < end; i++){
+            if(nums[i] == 9){
+                front9 = true;
+            }
+        }
+        return front9;
+    }
+
+
+    public boolean array123(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++){
+            if (nums[i]==1 && nums[i+1]==2 && nums[i+2] == 3){
+                return true;
+            }
+        }return false;
+    }
 
 }
