@@ -67,4 +67,30 @@ public class Warmup2 {
         return result;
     }
 
+
+    public int last2(String str) {
+        if(str.length()<2)return 0;
+        String last2 = str.substring(str.length() - 2);
+        int count = 0;
+        for ( int i = 0; i < str.length()-2; i++){
+            if(str.substring(i,i+2).equals(last2)){
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    public int arrayCount9(int[] nums) {
+        int count = 0;
+        for(int i = 0; i < nums.length; i++){
+            if (nums[i] == 9){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+
+
 }
