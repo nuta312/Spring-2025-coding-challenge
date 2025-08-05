@@ -113,4 +113,29 @@ public class Warmup2 {
         }return false;
     }
 
+
+    public int stringMatch(String a, String b) {
+        int len = Math.min(a.length(), b.length());
+        int count = 0;
+        for(int i = 0; i < len - 1; i++){
+            String a2 = a.substring(i, i+2);
+            String b2 = b.substring(i, i+2);
+            if(a2.equals(b2)){
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    public String stringX(String str) {
+        String result = "";
+        for (int i=0; i<str.length(); i++) {
+            if (!(i > 0 && i < (str.length()-1) && str.substring(i, i+1).equals("x"))) {
+                result = result + str.substring(i, i+1);
+            }
+        }
+        return result;
+    }
+
 }
