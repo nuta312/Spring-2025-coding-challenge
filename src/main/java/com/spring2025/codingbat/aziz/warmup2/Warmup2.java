@@ -138,4 +138,32 @@ public class Warmup2 {
         return result;
     }
 
+
+    public String altPairs(String str) {
+        String result = "";
+        for(int i = 0; i < str.length(); i+=4){
+            int end = i + 2;
+            if(end > str.length()){
+                end = str.length();
+            }
+            result += str.substring(i,end);
+        }
+        return result;
+    }
+
+
+    public String stringYak(String str) {
+        String result = "";
+        for(int i = 0; i<str.length(); i++){
+            if(i+2<str.length() && str.charAt(i)=='y' && str.charAt(i+2)=='k'){
+                i = i + 2;
+            }else {
+                result = result + str.charAt(i);
+            }
+        }
+        return result;
+    }
+
+
+
 }
