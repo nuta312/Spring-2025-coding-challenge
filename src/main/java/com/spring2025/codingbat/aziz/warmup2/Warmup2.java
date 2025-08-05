@@ -48,4 +48,23 @@ public class Warmup2 {
         }
         return str.substring(i+1, i+2).equals("x");
     }
+
+
+    public String stringBits(String str) {
+        String result = "";
+        for(int i = 0; i < str.length(); i +=2){
+            result += str.charAt(i);
+        }
+        return result;
+    }
+
+
+    public String stringSplosion(String str) {
+        String result = "";
+        for(int i = 0; i <= str.length(); i++){
+            result +=  str.substring(0,i);
+        }
+        return result;
+    }
+
 }
