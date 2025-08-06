@@ -114,23 +114,24 @@ nearHundred(89) → false
     public boolean nearHundred(int n) {
         return (Math.abs(100 - n) <= 10) || (Math.abs(200 - n) <= 10);
     }
-/*
-Warmup-1 > posNeg
-prev  |  next  |  chance
-Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
+
+    /*
+    Warmup-1 > posNeg
+    prev  |  next  |  chance
+    Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
 
 
-posNeg(1, -1, false) → true
-posNeg(-1, 1, false) → true
-posNeg(-4, -5, true) → true
- */
-public boolean posNeg(int a, int b, boolean negative) {
-    if (negative) {
-        return (a < 0 && b < 0);
-    } else {
-        return (a < 0 && b > 0 || a > 0 && b < 0);
+    posNeg(1, -1, false) → true
+    posNeg(-1, 1, false) → true
+    posNeg(-4, -5, true) → true
+     */
+    public boolean posNeg(int a, int b, boolean negative) {
+        if (negative) {
+            return (a < 0 && b < 0);
+        } else {
+            return (a < 0 && b > 0 || a > 0 && b < 0);
+        }
     }
-}
 /*
 Warmup-1 > notString
 prev  |  next  |  chance
@@ -162,26 +163,46 @@ missingChar("kitten", 4) → "kittn"
 
     public String missingChar(String str, int n) {
         String front = str.substring(0, n);
-        String back = str.substring(n+1,  str.length());
+        String back = str.substring(n + 1, str.length());
         return front + back;
     }
-/*
-Warmup-1 > frontBack
-prev  |  next  |  chance
-Given a string, return a new string where the first and last chars have been exchanged.
+
+    /*
+    Warmup-1 > frontBack
+    prev  |  next  |  chance
+    Given a string, return a new string where the first and last chars have been exchanged.
 
 
-frontBack("code") → "eodc"
-frontBack("a") → "a"
-frontBack("ab") → "ba"
- */
-public String frontBack(String str) {
-    if (str.length() >=2){
-        return( str.charAt(str.length()-1) + str.substring(1, str.length()-1) + str.charAt(0));
+    frontBack("code") → "eodc"
+    frontBack("a") → "a"
+    frontBack("ab") → "ba"
+     */
+    public String frontBack(String str) {
+        if (str.length() >= 2) {
+            return (str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0));
+        }
+        return str;
     }
-    return str;
-}
 
+    /*
+    Warmup-1 > front3
+    prev  |  next  |  chance
+    Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+
+    front3("Java") → "JavJavJav"
+    front3("Chocolate") → "ChoChoCho"
+    front3("abc") → "abcabcabc"
+     */
+    public String front3(String str) {
+        String front;
+        if (str.length() > 2) {
+            front = str.substring(0, 3);
+        } else {
+            front = str;
+        }
+        return front + front + front;
+    }
 
 
 }
