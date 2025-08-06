@@ -165,5 +165,27 @@ public class Warmup2 {
     }
 
 
+    public int array667(int[] nums) {
+        int count = 0;
+        for(int i = 0; i < nums.length -1; i++){
+            if(nums[i]== 6 && nums[i+1]== 6 || nums[i+1]==7){
+                count ++;
+            }
+        }
+        return count;
+    }
+
+
+    public boolean noTriples(int[] nums) {
+        boolean no3 = true;
+        for(int i = 0; i < nums.length - 2; i++){
+            if(nums[i]==nums[i+1] && nums[i]==nums[i+2]){
+                no3 = false;
+            }
+        }
+        return no3;
+    }
+
+
 
 }
