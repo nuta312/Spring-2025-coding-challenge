@@ -255,5 +255,21 @@ or35(8) → false
         return front + str + front;
     }
 
+    /*
+    Warmup-1 > startHi
+    prev  |  next  |  chance
+    Given a string, return true if the string starts with "hi" and false otherwise.
+
+
+    startHi("hi there") → true
+    startHi("hi") → true
+    startHi("hello hi") → false
+     */
+    public boolean startHi(String str) {
+        if (str.length() > 1) {
+            return (str.substring(0, 2).equalsIgnoreCase("hi"));
+        }
+        return false;
+    }
 
 }
