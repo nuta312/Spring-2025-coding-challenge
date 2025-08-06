@@ -347,4 +347,23 @@ hasTeen(20, 10, 13) → true
         return str;
     }
 
+    /*
+    Warmup-1 > mixStart
+prev  |  next  |  chance
+Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+
+
+mixStart("mix snacks") → true
+mixStart("pix snacks") → true
+mixStart("piz snacks") → false
+     */
+
+    public boolean mixStart(String str) {
+        if (str.length() > 2) {
+            return (str.substring(1, 3).equalsIgnoreCase("ix"));
+        }
+        return false;
+    }
+
+
 }
