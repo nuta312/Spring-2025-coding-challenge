@@ -87,5 +87,22 @@ countXX("xxxx") → 3
         return str.substring(i + 1, i + 2).equalsIgnoreCase("x");
     }
 
+    /*
+    Warmup-2 > stringBits
+    prev  |  next  |  chance
+    Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+
+    stringBits("Hello") → "Hlo"
+    stringBits("Hi") → "H"
+    stringBits("Heeololeo") → "Hello"
+     */
+    public String stringBits(String str) {
+        String newStr = "";
+        for (int i = 0; i < str.length(); i = i + 2) {
+            newStr += str.charAt(i);
+        }
+        return newStr;
+    }
 
 }
