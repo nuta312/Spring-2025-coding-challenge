@@ -105,4 +105,27 @@ countXX("xxxx") → 3
         return newStr;
     }
 
+    /*
+    Warmup-2 > stringSplosion
+    prev  |  next  |  chance
+    Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+    stringSplosion("Code") → "CCoCodCode"
+    stringSplosion("abc") → "aababc"
+    stringSplosion("ab") → "aab"
+     */
+    public String stringSplosion(String str) {
+
+        String res = "";
+        for (int i = 0; i <= str.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                res += str.charAt(j);
+            }
+        }
+        return res;
+
+    }
+
+
 }
