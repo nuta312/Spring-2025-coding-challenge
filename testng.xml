@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/12/IdeaProjects/Spring-2025-coding-challenge">
+        <parameter name="browser" value="Opera"/>
+        <parameter name="username" value="superadmin"/>
+        <parameter name="password" value="12345"/>
+
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name="LoginTest"/>-->
+        <!--            </run>-->
+        <!--        </groups>-->
+        <classes>
+            <class name="com.spring2025.codingbat.iliaz.testng_demo.ParametersDemo"></class>
+        </classes>
+        <!--        <packages>-->
+        <!--            <package name="com.spring2025.codingbat.iliaz.testng_demo.*"></package>-->
+        <!--        </packages>-->
+    </test>
+</suite>

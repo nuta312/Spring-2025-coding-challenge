@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Avia sales automation tests">
+
+    <test name="Hello World">
+
+        <classes>
+
+            <class name="com.spring2025.codingbat.iliaz.testng_demo.BeforeClassDemo">
+
+                <methods>
+                    <exclude name="test1"/>
+
+                </methods>
+            </class>
+
+
+            <class name="com.spring2025.codingbat.iliaz.testng_demo.BeforeMethodDemo"/>
+
+        </classes>
+
+    </test>
+
+</suite>
